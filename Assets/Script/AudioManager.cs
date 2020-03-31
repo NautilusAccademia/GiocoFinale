@@ -16,31 +16,33 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] AudioMixerGroup musicMixer;
 
+    [SerializeField]
     private AudioSource itemsSource;
+    [SerializeField]
     private AudioSource musicSource;
 
     public void PlayTakeElement()
     {
-        itemsSource.clip = takeElementClip;
-        itemsSource.Play();
+        //itemsSource.clip = takeElementClip;
+        itemsSource.PlayOneShot(takeElementClip);
     }
 
     public void PlayUseElement()
     {
-        itemsSource.clip = useElementClip;
-        itemsSource.Play();
+        //itemsSource.clip = useElementClip;
+        itemsSource.PlayOneShot(useElementClip);
     }
 
     public void PlayOpenDoor()
     {
-        itemsSource.clip = openDoorClip;
-        itemsSource.Play();
+        //itemsSource.clip = openDoorClip;
+        itemsSource.PlayOneShot(openDoorClip);
     }
 
     public void PlayTakeDamage()
     {
-        itemsSource.clip = takeDamageClip;
-        itemsSource.Play();
+        //itemsSource.clip = takeDamageClip;
+        itemsSource.PlayOneShot(takeDamageClip);
     }
 
     public void PlayMusicSource()
@@ -51,8 +53,8 @@ public class AudioManager : MonoBehaviour
 
     public void PlayPortalTransition()
     {
-        itemsSource.clip = portalTransitionClip;
-        itemsSource.Play();
+        //itemsSource.clip = portalTransitionClip;
+        itemsSource.PlayOneShot(portalTransitionClip);
     }
 
     private void Awake()
@@ -63,13 +65,13 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        itemsSource = gameObject.AddComponent<AudioSource>();
-        itemsSource.loop = false;
+        //itemsSource = gameObject.AddComponent<AudioSource>();
+        //itemsSource.loop = false;
 
-        musicSource = gameObject.AddComponent<AudioSource>();
-        musicSource.loop = true;
+        //musicSource = gameObject.AddComponent<AudioSource>();
+        //musicSource.loop = true;
 
-        musicSource.volume = 0.3f;
+        //musicSource.volume = 0.3f;
 
         AudioManager.instance.PlayMusicSource();
     }

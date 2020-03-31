@@ -21,11 +21,11 @@ public class GameManager : MonoBehaviour
 
     public static int Health;
 
-    public static float[] Level;
+    public static int Chapter;
+
+    public static int Level;
 
     public static bool YouAreInThePresent;
-
-    public static bool YouAreInThePast;
 
     public static int[] ElementInHand;
 

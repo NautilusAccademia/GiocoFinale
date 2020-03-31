@@ -31,7 +31,7 @@ public class PlayerController3 : MonoBehaviour
 
        if(Input.GetKeyDown(KeyCode.E))
         {
-            gameObject.GetComponent<Animation>().Play("Taken");
+            //gameObject.GetComponent<Animation>().Play("Taken");
 
             playerAn.SetBool("Taken", true);
             
