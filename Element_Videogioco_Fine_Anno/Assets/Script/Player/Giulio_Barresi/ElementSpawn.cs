@@ -12,10 +12,13 @@ public class ElementSpawn : MonoBehaviour
     [SerializeField]
     GameObject Portal;
 
+    public static bool portalActivated; //elisa
+
     // Start is called before the first frame update
     void Start()
     {
         Portal.SetActive(false);
+        portalActivated = false; //elisa
     }
 
     // Update is called once per frame
@@ -29,5 +32,6 @@ public class ElementSpawn : MonoBehaviour
         Portal.SetActive(true);
         ElementBrazier.SetActive(true);
         Instantiate(ElementBrazier, objectPos.transform.position, Quaternion.identity, objectPos.transform.parent);
+        portalActivated = true; //elisa
     }
 }

@@ -14,6 +14,7 @@ public class TrapDamage : MonoBehaviour
     void Start()
     {
         trapAn = GetComponent<Animator>();
+
     }
 
  void OnTriggerStay(Collider other)

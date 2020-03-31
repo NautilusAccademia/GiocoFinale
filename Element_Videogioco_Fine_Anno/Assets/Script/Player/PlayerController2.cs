@@ -18,10 +18,10 @@ public class PlayerController2 : MonoBehaviour
 
         else
         {
-            playerAn.SetBool("isWalking", false); //aggiunta elisa
+            playerAn.SetBool("is_walking", false); //aggiunta elisa
         }
 
-     }
+    }
 
     void PlayerMovement()
     {
@@ -32,6 +32,6 @@ public class PlayerController2 : MonoBehaviour
 
         transform.rotation = Quaternion.LookRotation(Movement); //The player will rotate according to its movement 
         transform.Translate(Movement * speed * Time.deltaTime, Space.World); //move the player 
-        playerAn.SetBool("isWalking", true); //aggiunta elisa
+        playerAn.SetBool("is_walking", true); //aggiunta elisa
     }
 }

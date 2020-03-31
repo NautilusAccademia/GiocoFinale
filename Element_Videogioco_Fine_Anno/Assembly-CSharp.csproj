@@ -65,54 +65,59 @@
   <ItemGroup>
     <Compile Include="Assets\Prove_Elisa\Camera.cs" />
     <Compile Include="Assets\Prove_Elisa\TrapDamage.cs" />
+    <Compile Include="Assets\Script\AudioManager.cs" />
     <Compile Include="Assets\Script\Damage.cs" />
     <Compile Include="Assets\Script\Door2.cs" />
     <Compile Include="Assets\Script\ElemntsHUD.cs" />
     <Compile Include="Assets\Script\Health.cs" />
+    <Compile Include="Assets\Script\PauseMenu1.cs" />
     <Compile Include="Assets\Script\Platform.cs" />
     <Compile Include="Assets\Script\Player\Giulio_Barresi\ElementOnPastBrazier.cs" />
     <Compile Include="Assets\Script\Player\Giulio_Barresi\ElementOnPastSecondBrazier.cs" />
     <Compile Include="Assets\Script\Player\Giulio_Barresi\ElementSpawn.cs" />
+    <Compile Include="Assets\Script\Player\Giulio_Barresi\GameManager.cs" />
     <Compile Include="Assets\Script\Player\Giulio_Barresi\InteractiveElement.cs" />
     <Compile Include="Assets\Script\Player\Giulio_Barresi\PlayerInteraction.cs" />
     <Compile Include="Assets\Script\Player\Giulio_Barresi\TipOnObject.cs" />
     <Compile Include="Assets\Script\Player\PlayerController2.cs" />
+    <Compile Include="Assets\Script\PlayerController3.cs" />
+    <Compile Include="Assets\Script\TutorialTrigger.cs" />
     <Compile Include="Assets\Script\TutorialUI.cs" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/Users/giuri/Documents/Unity/Element_Videogioco_Fine_Anno/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/Users/giuri/Documents/Unity/GiocoFinaleShare/GiocoFinale/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Cinemachine">
-      <HintPath>D:/Users/giuri/Documents/Unity/Element_Videogioco_Fine_Anno/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+      <HintPath>D:/Users/giuri/Documents/Unity/GiocoFinaleShare/GiocoFinale/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/Users/giuri/Documents/Unity/Element_Videogioco_Fine_Anno/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/Users/giuri/Documents/Unity/GiocoFinaleShare/GiocoFinale/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/Users/giuri/Documents/Unity/Element_Videogioco_Fine_Anno/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/Users/giuri/Documents/Unity/GiocoFinaleShare/GiocoFinale/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/Users/giuri/Documents/Unity/Element_Videogioco_Fine_Anno/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/Users/giuri/Documents/Unity/GiocoFinaleShare/GiocoFinale/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/Users/giuri/Documents/Unity/Element_Videogioco_Fine_Anno/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/Users/giuri/Documents/Unity/GiocoFinaleShare/GiocoFinale/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/Users/giuri/Documents/Unity/Element_Videogioco_Fine_Anno/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/Users/giuri/Documents/Unity/GiocoFinaleShare/GiocoFinale/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/Users/giuri/Documents/Unity/Element_Videogioco_Fine_Anno/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/Users/giuri/Documents/Unity/GiocoFinaleShare/GiocoFinale/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.cinemachine.editor">
-      <HintPath>D:/Users/giuri/Documents/Unity/Element_Videogioco_Fine_Anno/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+      <HintPath>D:/Users/giuri/Documents/Unity/GiocoFinaleShare/GiocoFinale/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/Users/giuri/Documents/Unity/Element_Videogioco_Fine_Anno/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/Users/giuri/Documents/Unity/GiocoFinaleShare/GiocoFinale/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-      <HintPath>D:/Users/giuri/Documents/Unity/Element_Videogioco_Fine_Anno/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+      <HintPath>D:/Users/giuri/Documents/Unity/GiocoFinaleShare/GiocoFinale/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/Users/giuri/Documents/Unity/Element_Videogioco_Fine_Anno/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/Users/giuri/Documents/Unity/GiocoFinaleShare/GiocoFinale/Element_Videogioco_Fine_Anno/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -51,7 +51,8 @@ public class Door2 : MonoBehaviour
         {
             isOpen = true; //and then consider the door open
             anim.SetBool("isOpen", true); //then the bool "opening" actives the animation which opens the door
-            //Explain.enabled = false; //the explaination is disabled once again       
+            //Explain.enabled = false; //the explaination is disabled once again    
+            AudioManager.instance.PlayOpenDoor();
         }
     }
 

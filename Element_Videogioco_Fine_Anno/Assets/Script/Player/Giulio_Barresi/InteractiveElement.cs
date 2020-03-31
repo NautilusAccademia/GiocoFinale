@@ -47,8 +47,13 @@ public class InteractiveElement : MonoBehaviour
     }
 
     public void DestroyElement()
-    {     
-        Destroy(GetComponent<Transform>().GetChild(1).gameObject); 
+    {
+        if (transform.childCount > 1)
+        {
+            Destroy(GetComponent<Transform>().GetChild(1).gameObject); 
+        }
+        //
+        //Destroy(GetComponent<GameObject>().name.Equals("Fire(Clone)");
     }
     public void DestroyWater()
     {

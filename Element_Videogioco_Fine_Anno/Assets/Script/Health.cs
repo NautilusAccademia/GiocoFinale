@@ -9,25 +9,41 @@ public class Health : MonoBehaviour
 
     [SerializeField] GameObject[] healthHUD;
 
+    [SerializeField] float invincibilityTime; // tempo durata invincibilitá
+    private float currentTime;	// tempo trascorso dall'ultima volta che hai subito danno
+
     private int currentHealthIndex;
+    private Animator playerAn;
 
     private void Awake()
     {
         health = healthHUD.Length;
         currentHealthIndex = healthHUD.Length - 1;
+        currentTime = invincibilityTime;
+        playerAn = GetComponent<Animator>();
     }
 
     public void DecreaseHealth()
     {
-        if(health==0)
+        if (currentTime > invincibilityTime)
         {
-            return;
+            currentTime = 0;
+
+            if (health == 0)
+            {
+                return;
+
+                playerAn.SetBool("is_dying", true);
+            }
+
+            health--;
+
+            AudioManager.instance.PlayTakeDamage();
+
+            healthHUD[currentHealthIndex].SetActive(false);
+            currentHealthIndex--;
+
         }
-
-        health--;
-
-        healthHUD[currentHealthIndex].SetActive(false);
-        currentHealthIndex--;
     }
 
     public void IncreaseHealth()
@@ -42,6 +58,11 @@ public class Health : MonoBehaviour
         currentHealthIndex++;
         healthHUD[currentHealthIndex].SetActive(true);
 
+    }
+
+    private void Update()
+    {
+        currentTime += Time.deltaTime; // Incrementa il timer ogni frame del tempo trascorso nel frame, quindi semplicemente il tempo trascorso
     }
 
 }
