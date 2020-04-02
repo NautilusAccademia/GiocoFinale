@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+
     public static PlayerInteraction playerInteraction;
     public static InteractiveElement interactiveElement;
-    public static ElementSpawn elementSpawn;
-    public static ElementOnPastBrazier elementOnPastBrazier;
-    public static ElementOnPastSecondBrazier elementOnPastSecondBrazier;
+    public static FireOnBrazier fireOnBrazier;
     public static Health health;
     public static AudioManager audioManager;
     public static Door2 door2;
@@ -27,19 +27,26 @@ public class GameManager : MonoBehaviour
 
     public static bool YouAreInThePresent;
 
-    public static int[] ElementInHand;
+    public static int[] ElementInHand = new int [4];
+
+    public enum Elements
+    {
+        Fire, Water, Air, Earth
+    }
+
+    public List<InteractableObjects> interactableObjectsList = new List<InteractableObjects>();
 
     private void Awake()
     {
+        instance = this;
+
         playerController3 = FindObjectOfType<PlayerController3>(); //Find movement script
         playerGameObject = GameObject.Find("Player"); //Find player GameObject
         playerRb = playerGameObject.GetComponent<Rigidbody>(); //Find player Rigidbody
 
         playerInteraction = FindObjectOfType<PlayerInteraction>();
         interactiveElement = FindObjectOfType<InteractiveElement>();
-        elementSpawn = FindObjectOfType<ElementSpawn>();
-        elementOnPastBrazier = FindObjectOfType<ElementOnPastBrazier>();
-        elementOnPastSecondBrazier = FindObjectOfType<ElementOnPastSecondBrazier>();
+        fireOnBrazier = FindObjectOfType<FireOnBrazier>();
         health = FindObjectOfType<Health>();
         audioManager = FindObjectOfType<AudioManager>();
         door2 = FindObjectOfType<Door2>();
@@ -55,6 +62,12 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (interactableObjectsList != null && Input.GetKeyDown(KeyCode.E))
+        {
+            foreach(InteractableObjects interactableObjects in interactableObjectsList)
+            {
+                interactableObjects.Interact();
+            }            
+        }
     }
 }

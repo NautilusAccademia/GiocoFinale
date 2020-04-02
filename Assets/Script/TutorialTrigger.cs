@@ -5,8 +5,7 @@ using UnityEngine;
 
 public class TutorialTrigger : MonoBehaviour
 {
-    [SerializeField] private Image customImage;
-
+    /*[SerializeField] private Image customImage;
 
     void OnTriggerEnter(Collider other)
     {
@@ -19,5 +18,5 @@ public class TutorialTrigger : MonoBehaviour
     void OnTriggerExit(Collider other)
     {
         customImage.enabled = false;
-    }
+    }*/
 }

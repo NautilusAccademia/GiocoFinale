@@ -1,0 +1,31 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GetThroughInteraction : InteractableObjects
+{
+    //added by Nanni
+    [SerializeField] Animator transition; //Animator that takes in reference the Canvas for the transition
+
+    [SerializeField] Transform pos;
+    public override void SpecificInteraction()
+    {
+        base.SpecificInteraction();
+        PlayerGetThrough();
+    }
+
+    void PlayerGetThrough()
+    {
+        StartCoroutine(TransitionSet());//Added by Nanni, starts a couroutine which contains the animation
+        GameManager.playerGameObject.transform.position = pos.transform.position;
+    }
+
+    private IEnumerator TransitionSet() //IEnumerator which sets the animation
+    {
+        transition.SetBool("ActiveTransition", true); //At the begging, set the bool true and start the animation
+
+        yield return new WaitForSeconds(1); //After one second...
+
+        transition.SetBool("ActiveTransition", false); //Set the bool false, so that the animation is stopped
+    }
+}

@@ -4824,7 +4824,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3499414245289128145}
   m_Layer: 0
-  m_Name: PassatoPos2
+  m_Name: FirePos2
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -4855,7 +4855,7 @@ GameObject:
   - component: {fileID: 8496848261405500233}
   - component: {fileID: 3499414245666310224}
   - component: {fileID: 3499414245666310239}
-  - component: {fileID: 1774561719}
+  - component: {fileID: 830715500}
   m_Layer: 0
   m_Name: bracierePassato2
   m_TagString: PastSecondBrazier
@@ -4907,7 +4907,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.54377747, y: 1, z: 0.5324068}
   m_Center: {x: -0.045692444, y: 0, z: -0.03918791}
---- !u!114 &1774561719
+--- !u!114 &830715500
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4916,12 +4916,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 4877828998403363162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c174a59894a1656498eb4b811bbb08b4, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fb944373607aa44e8ec4acf1ce99586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectPos3: {fileID: 3499414245289128146}
-  ElementBrazier: {fileID: 3518185620621399233, guid: 31f2e0623b71ee5478d0a7b15955e9df,
-    type: 3}
+  Fire: {fileID: 3518185620621399233, guid: 31f2e0623b71ee5478d0a7b15955e9df, type: 3}
+  PlayerInRange: 0
+  customImage: {fileID: 0}
+  myElement: 0
 --- !u!1 &5362436806942000963
 GameObject:
   m_ObjectHideFlags: 0
