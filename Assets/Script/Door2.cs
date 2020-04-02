@@ -7,22 +7,12 @@ public class Door2 : MonoBehaviour
 {
     Animator anim; //The animation that opens the door
     //Text Explain; //The explaination
-    [SerializeField]
-    bool isOpen; //check if door is open or not
+    [SerializeField] bool isOpen; //check if door is open or not
 
-    [SerializeField]
-    public bool PresentBrazierIsOn;
-    [SerializeField]
-    public bool PastBrazierIsOn;
-    [SerializeField]
-    public bool PastSecondBrazierIsOn;
+    [SerializeField] GameObject[] conditionToOpenDoors;
 
     private void Start()
     {
-        PresentBrazierIsOn = false;
-        PastBrazierIsOn = false;
-        PastSecondBrazierIsOn = false;
-
         isOpen = false;
 
         anim = GetComponent<Animator>(); //Get the component Animator of the Door
@@ -46,14 +36,19 @@ public class Door2 : MonoBehaviour
 
     void OpenDoor()
     {
-        //Explain.enabled = true; //show the explaination
-        if (PresentBrazierIsOn == true && PastBrazierIsOn == true && PastSecondBrazierIsOn == true) // if the O button is being pressed
+        foreach (GameObject gameObject in conditionToOpenDoors)
         {
-            isOpen = true; //and then consider the door open
-            anim.SetBool("isOpen", true); //then the bool "opening" actives the animation which opens the door
-            //Explain.enabled = false; //the explaination is disabled once again    
-            AudioManager.instance.PlayOpenDoor();
-        }
+            if (gameObject.activeInHierarchy == false)
+            {
+                return;
+            }
+        }      
+       
+        isOpen = true; //and then consider the door open
+        anim.SetBool("isOpen", true); //then the bool "opening" actives the animation which opens the door
+        //Explain.enabled = false; //the explaination is disabled once again    
+        AudioManager.instance.PlayOpenDoor();
+        //Explain.enabled = true; //show the explaination
     }
 
     //Input.GetKey(KeyCode.O)
