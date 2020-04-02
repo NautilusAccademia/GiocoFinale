@@ -306,7 +306,7 @@ public class PlayerInteraction : MonoBehaviour
             StartCoroutine(TransitionSet());//Added by Nanni, starts a couroutine which contains the animation
             gameObject.transform.position = PastPortalPos.transform.position;
             AudioManager.instance.PlayPortalTransition();
-            AudioManager.instance.AddMixerGroup();
+            AudioManager.instance.PastSnapshot();
         }
     }
     void TakingPastPortal()
@@ -316,7 +316,7 @@ public class PlayerInteraction : MonoBehaviour
             StartCoroutine(TransitionSet());//Added by Nanni, as above in TakingPresentPortal, so does here
             gameObject.transform.position = PresentPortalPos.transform.position;
             AudioManager.instance.PlayPortalTransition();
-            AudioManager.instance.RemoveMixerGroup();
+            AudioManager.instance.PresentSnapshot();
         }    
     }
 

@@ -21,6 +21,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     private AudioSource musicSource;
 
+    public AudioMixerSnapshot present;
+    public AudioMixerSnapshot past;
+
     public void PlayTakeElement()
     {
         //itemsSource.clip = takeElementClip;
@@ -75,13 +78,13 @@ public class AudioManager : MonoBehaviour
 
         AudioManager.instance.PlayMusicSource();
     }
-    public void AddMixerGroup()
+    public void PresentSnapshot()
     {
-        musicSource.outputAudioMixerGroup = musicMixer;
+        present.TransitionTo(0.01f);
     }
 
-    public void RemoveMixerGroup()
+    public void PastSnapshot()
     {
-        musicSource.outputAudioMixerGroup = null;
+        past.TransitionTo(0.01f);
     }
 }

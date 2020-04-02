@@ -10720,6 +10720,8 @@ MonoBehaviour:
     type: 2}
   itemsSource: {fileID: 792956721}
   musicSource: {fileID: 792956720}
+  present: {fileID: 24500006, guid: f03cb93d38929164a95c9276c561d562, type: 2}
+  past: {fileID: 161331003227860643, guid: f03cb93d38929164a95c9276c561d562, type: 2}
 --- !u!4 &792956719
 Transform:
   m_ObjectHideFlags: 0
