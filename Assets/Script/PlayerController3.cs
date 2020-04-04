@@ -33,7 +33,7 @@ public class PlayerController3 : MonoBehaviour
         {
             //gameObject.GetComponent<Animation>().Play("Taken");
 
-            playerAn.SetBool("Taken", true);
+            playerAn.SetTrigger("Taken");
             
         }
 
