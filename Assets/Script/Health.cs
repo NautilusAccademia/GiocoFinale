@@ -33,7 +33,7 @@ public class Health : MonoBehaviour
             {
                 return;
 
-                playerAn.SetBool("is_dying", true);
+                playerAn.SetTrigger("Death");
             }
 
             health--;
