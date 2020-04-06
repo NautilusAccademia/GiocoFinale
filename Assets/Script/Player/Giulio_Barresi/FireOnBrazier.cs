@@ -10,7 +10,7 @@ public class FireOnBrazier : InteractableObjects
 
     public static bool portalActivated; //elisa
 
-    public GameManager.Elements myElement;
+    //public GameManager.Elements myElement;
 
     // Start is called before the first frame update
     void Start()
@@ -21,14 +21,11 @@ public class FireOnBrazier : InteractableObjects
 
     public void SpawnFireOnBrazier()
     {
-        if (PlayerInteraction.instance.FireInHand == true)
-        {
-            Fire.SetActive(true);
-            portalActivated = true; //elisa
-            PlayerInteraction.instance.FireInHand = false;
-            InteractiveElement.instance.DestroyElement();
-            HUD.instance.HideFireHUD();
-        }      
+        Fire.SetActive(true);
+        portalActivated = true; //elisa
+        //PlayerInteraction.instance.elementInHand = myElement;
+        InteractiveElement.instance.DestroyElement();
+        HUD.instance.HideFireHUD();   
     }
 
     public override void SpecificInteraction()

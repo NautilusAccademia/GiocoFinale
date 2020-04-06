@@ -5,18 +5,20 @@ using UnityEngine.UI;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    [SerializeField]
+    /*[SerializeField]
     public bool FireInHand;
     [SerializeField]
     public bool WaterInHand;
     [SerializeField]
     public bool AirInHand;
     [SerializeField]
-    public bool EarthInHand;
+    public bool EarthInHand;*/
 
     public InteractableObjects interactableObjects;
 
     public static PlayerInteraction instance;
+
+    public GameManager.Elements elementInHand;
 
     //Temporary
     [SerializeField] private Image customImage;
@@ -24,10 +26,10 @@ public class PlayerInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FireInHand = false;
+        /*FireInHand = false;
         WaterInHand = false;
         AirInHand = false;
-        EarthInHand = false;
+        EarthInHand = false;*/
 
         HUD.instance.HideFireHUD();
     }
@@ -47,11 +49,12 @@ public class PlayerInteraction : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            FireInHand = false;
+            //FireInHand = false;
+            elementInHand = GameManager.Elements.None;
             HUD.instance.HideFireHUD();
-            WaterInHand = false;
-            AirInHand = false;
-            EarthInHand = false;
+            //WaterInHand = false;
+            //AirInHand = false;
+            //EarthInHand = false;
             GameManager.interactiveElement.DestroyElement();
         }
     }

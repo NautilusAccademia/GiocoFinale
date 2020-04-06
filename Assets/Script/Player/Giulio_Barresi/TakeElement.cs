@@ -5,11 +5,16 @@ using UnityEngine.UI;
 
 public class TakeElement : InteractableObjects
 {
+    [SerializeField] GameManager.Elements elementToTake;
+
     void Take()
     {
-        PlayerInteraction.instance.FireInHand = true;
-        HUD.instance.ShowFireHUD();
-        GameManager.interactiveElement.SpawnFire();
+        PlayerInteraction.instance.elementInHand = elementToTake;           
+        if(elementToTake == GameManager.Elements.Fire)
+        {
+            HUD.instance.ShowFireHUD();
+            GameManager.interactiveElement.SpawnFire();
+        }
     }
 
     public override void SpecificInteraction()
