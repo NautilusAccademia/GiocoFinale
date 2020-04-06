@@ -11,6 +11,7 @@ public class Door2 : MonoBehaviour
 
     [SerializeField] GameObject[] conditionToOpenDoors;
 
+    [SerializeField] AudioNonInteractiveObject audioDoor;
     private void Start()
     {
         isOpen = false;
@@ -22,7 +23,11 @@ public class Door2 : MonoBehaviour
 
     private void Update()
     {
-        OpenDoor();
+        if (!isOpen)
+        {
+            OpenDoor();
+        }
+        
     }
 
     /*private void OnTriggerStay(Collider other)
@@ -36,6 +41,7 @@ public class Door2 : MonoBehaviour
 
     void OpenDoor()
     {
+        
         foreach (GameObject gameObject in conditionToOpenDoors)
         {
             if (gameObject.activeInHierarchy == false)
@@ -47,7 +53,9 @@ public class Door2 : MonoBehaviour
         isOpen = true; //and then consider the door open
         anim.SetBool("isOpen", true); //then the bool "opening" actives the animation which opens the door
         //Explain.enabled = false; //the explaination is disabled once again    
-        AudioManager.instance.PlayOpenDoor();
+        
+        audioDoor.PlayAudioClip();
+
         //Explain.enabled = true; //show the explaination
     }
 

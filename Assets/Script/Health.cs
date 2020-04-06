@@ -38,7 +38,7 @@ public class Health : MonoBehaviour
 
             health--;
 
-            AudioManager.instance.PlayTakeDamage();
+       
 
             healthHUD[currentHealthIndex].SetActive(false);
             currentHealthIndex--;

@@ -3,21 +3,48 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[RequireComponent(typeof(AudioSource))]
 public class InteractableObjects : MonoBehaviour
 {
+   
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip audioClip;
+
+    void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    public void PlayAudioClip()
+    {
+        if (audioSource != null && audioClip != null)
+            audioSource.PlayOneShot(audioClip);
+        else
+        {
+            if (audioSource == null)
+                Debug.LogFormat("L'oggetto {0} non ha un AudioSource", gameObject.name);
+            if (audioSource == null)
+                Debug.LogFormat("L'oggetto {0} non ha un AudioClip", gameObject.name);
+        }
+    }
+
     public void Interact()
     {
         SpecificInteraction();
+        PlayAudioClip();
     }
 
     public virtual void SpecificInteraction()
     {
-        
+       
     }
 
     protected void OnTriggerEnter(Collider other)
     {
-        GameManager.instance.interactableObjectsList.Add(this);
+        if(!GameManager.instance.interactableObjectsList.Contains(this))
+        {
+            GameManager.instance.interactableObjectsList.Add(this);
+        }
         if (other.CompareTag("Player"))
         {
             HUD.instance.infoEImage.enabled = true;

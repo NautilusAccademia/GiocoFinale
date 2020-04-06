@@ -11,7 +11,9 @@ public class GetThroughInteraction : InteractableObjects
     public override void SpecificInteraction()
     {
         base.SpecificInteraction();
+        ChangeMusic();
         PlayerGetThrough();
+        
     }
 
     void PlayerGetThrough()
@@ -27,5 +29,19 @@ public class GetThroughInteraction : InteractableObjects
         yield return new WaitForSeconds(1); //After one second...
 
         transition.SetBool("ActiveTransition", false); //Set the bool false, so that the animation is stopped
+    }
+
+    private void ChangeMusic()
+    {
+       if(GameManager.instance.YouAreInThePresent)
+       {
+            AudioManager.instance.PastSnapshot();
+            GameManager.instance.YouAreInThePresent = false;
+       }
+        else
+        {
+            AudioManager.instance.PresentSnapshot();
+            GameManager.instance.YouAreInThePresent = true;
+        }
     }
 }

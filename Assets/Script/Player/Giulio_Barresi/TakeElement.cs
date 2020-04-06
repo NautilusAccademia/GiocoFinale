@@ -10,7 +10,6 @@ public class TakeElement : InteractableObjects
         PlayerInteraction.instance.FireInHand = true;
         HUD.instance.ShowFireHUD();
         GameManager.interactiveElement.SpawnFire();
-        AudioManager.instance.PlayTakeElement();
     }
 
     public override void SpecificInteraction()
