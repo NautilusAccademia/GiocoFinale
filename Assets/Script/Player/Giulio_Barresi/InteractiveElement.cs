@@ -35,6 +35,7 @@ public class InteractiveElement : MonoBehaviour
         foreach(GameObject gameObject in ElementInstantiated)
         {
             gameObject.SetActive(false);
+            PlayerInteraction.instance.elementInHand = GameManager.Elements.None;
         }
     }
 }

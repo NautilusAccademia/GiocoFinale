@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 6175714686336521672}
   - component: {fileID: 3724682171607275880}
   - component: {fileID: -453029650372447003}
+  - component: {fileID: 1334519379}
+  - component: {fileID: 7157984748550448085}
   m_Layer: 0
   m_Name: Fire 3
   m_TagString: Fire
@@ -28,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3518185620621399233}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -11.4, y: -17.7, z: 15.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4788,6 +4790,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 422c9c5a025888e438a86162235e42f9, type: 3}
+  repeatedMoreTimes: 1
+  condition: {fileID: 7157984748550448085}
+  elementToTake: 1
 --- !u!82 &-453029650372447003
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4885,6 +4890,33 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &1334519379
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3518185620621399233}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.51
+  m_Height: 1.4200003
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0.28}
+--- !u!114 &7157984748550448085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3518185620621399233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32694e41de203c14fa3cad0b95e88147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementofCondition: 0
 --- !u!1 &3518185620809892805
 GameObject:
   m_ObjectHideFlags: 0

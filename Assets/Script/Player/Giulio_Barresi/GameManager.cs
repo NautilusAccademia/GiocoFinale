@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
 
     public enum Elements
     {
-        Fire, Water, Air, Earth
+        None, Fire, Water, Air, Earth
     }
 
     public List<InteractableObjects> interactableObjectsList = new List<InteractableObjects>();

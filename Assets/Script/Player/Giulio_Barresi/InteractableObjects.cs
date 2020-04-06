@@ -10,6 +10,12 @@ public class InteractableObjects : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField] private AudioClip audioClip;
 
+    bool interacted;
+
+    [SerializeField] bool repeatedMoreTimes;
+
+    [SerializeField] Conditions condition;
+
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
@@ -30,8 +36,15 @@ public class InteractableObjects : MonoBehaviour
 
     public void Interact()
     {
-        SpecificInteraction();
-        PlayAudioClip();
+        if (condition == null || condition.CheckCondition())
+        {
+            if (interacted == false || repeatedMoreTimes == true)
+            {
+                SpecificInteraction();
+                PlayAudioClip();
+                interacted = true;
+            }
+        }  
     }
 
     public virtual void SpecificInteraction()
