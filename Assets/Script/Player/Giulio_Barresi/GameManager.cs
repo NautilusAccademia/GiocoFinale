@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
 
     public static int Level;
 
-    public static bool YouAreInThePresent;
+    public bool YouAreInThePresent;
 
     public static int[] ElementInHand = new int [4];
 
