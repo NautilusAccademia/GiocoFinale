@@ -21,11 +21,14 @@ public class FireOnBrazier : InteractableObjects
 
     public void SpawnFireOnBrazier()
     {
-        Fire.SetActive(true);
-        portalActivated = true; //elisa
-        PlayerInteraction.instance.FireInHand = false;
-        InteractiveElement.instance.DestroyElement();
-        HUD.instance.HideFireHUD();
+        if (PlayerInteraction.instance.FireInHand == true)
+        {
+            Fire.SetActive(true);
+            portalActivated = true; //elisa
+            PlayerInteraction.instance.FireInHand = false;
+            InteractiveElement.instance.DestroyElement();
+            HUD.instance.HideFireHUD();
+        }      
     }
 
     public override void SpecificInteraction()
