@@ -1226,6 +1226,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a968f0d7d7a29a34ea34e4d00ac85be0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pushRadius: 5
+  power: 10
+  playerRb: {fileID: 0}
 --- !u!65 &184883010
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10202,7 +10205,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 723132087}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 10da0846f69b717468d6fbd0ca9cdf48, type: 2}
   m_CullingMode: 0
@@ -18921,7 +18924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: fd84c4665dbf05c4ea0ce1afd63d20eb, type: 3}
-  repeatedMoreTimes: 0
+  repeatedMoreTimes: 1
   condition: {fileID: 0}
   transition: {fileID: 1810687397}
   pos: {fileID: 1616776107}
@@ -33933,7 +33936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: fd84c4665dbf05c4ea0ce1afd63d20eb, type: 3}
-  repeatedMoreTimes: 0
+  repeatedMoreTimes: 1
   condition: {fileID: 0}
   transition: {fileID: 1810687397}
   pos: {fileID: 797659317}
@@ -36145,6 +36148,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.010000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6465401710069103250, guid: d8a2f5599d204d54fb6af448a056fdbc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f1aed8201faf77940bca4f6b4f3d5597, type: 2}
+    - target: {fileID: 6465401710069103250, guid: d8a2f5599d204d54fb6af448a056fdbc,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8a2f5599d204d54fb6af448a056fdbc, type: 3}
