@@ -15,6 +15,11 @@ public class TakeElement : InteractableObjects
             HUD.instance.ShowFireHUD();
             GameManager.interactiveElement.SpawnFire();
         }
+        if (elementToTake == GameManager.Elements.Air)
+        {
+            HUD.instance.ShowAirHUD();
+            GameManager.interactiveElement.SpawnAir();
+        }
     }
 
     public override void SpecificInteraction()

@@ -7,6 +7,12 @@ public class HUD : MonoBehaviour
 {
     [SerializeField] private Image ElementHUDFire;
 
+    [SerializeField] private Image ElementHUDWater;
+
+    [SerializeField] private Image ElementHUDAir;  
+
+    [SerializeField] private Image ElementHUDEarth;
+
     [SerializeField] private Image ElementHUDEmpty;
 
     [SerializeField] public Image infoEImage;
@@ -29,4 +35,40 @@ public class HUD : MonoBehaviour
         ElementHUDEmpty.enabled = true;
         ElementHUDFire.enabled = false;
     }
+
+    /*public void ShowWaterHUD()
+    {
+        ElementHUDEmpty.enabled = false;
+        ElementHUDWater.enabled = true;
+    }
+
+    public void HideWaterHUD()
+    {
+        ElementHUDEmpty.enabled = true;
+        ElementHUDWater.enabled = false;
+    }*/
+
+    public void ShowAirHUD()
+    {
+        ElementHUDEmpty.enabled = false;
+        ElementHUDAir.enabled = true;
+    }
+
+    public void HideAirHUD()
+    {
+        ElementHUDEmpty.enabled = true;
+        ElementHUDAir.enabled = false;
+    }
+
+    /*public void ShowEarthHUD()
+    {
+        ElementHUDEmpty.enabled = false;
+        ElementHUDEarth.enabled = true;
+    }
+
+    public void HideEarthHUD()
+    {
+        ElementHUDEmpty.enabled = true;
+        ElementHUDEarth.enabled = false;
+    }*/
 }
