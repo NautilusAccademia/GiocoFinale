@@ -32,6 +32,9 @@ public class PlayerInteraction : MonoBehaviour
         EarthInHand = false;*/
 
         HUD.instance.HideFireHUD();
+        //HUD.instance.HideWaterHUD();
+        HUD.instance.HideAirHUD();
+        //HUD.instance.HideEarthHUD();
     }
 
     // Update is called once per frame
@@ -52,9 +55,14 @@ public class PlayerInteraction : MonoBehaviour
             //FireInHand = false;
             elementInHand = GameManager.Elements.None;
             HUD.instance.HideFireHUD();
+            //HUD.instance.HideWaterHUD();
+            HUD.instance.HideAirHUD();
+            //HUD.instance.HideEarthHUD();
+
             //WaterInHand = false;
             //AirInHand = false;
             //EarthInHand = false;
+
             GameManager.interactiveElement.DestroyElement();
         }
     }
