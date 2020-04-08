@@ -60,8 +60,7 @@ MeshRenderer:
   m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_Materials: []
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,7 +106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721c07682df856a45a48cf70c52402cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ElementPos: {fileID: 8837251935993712515}
   ElementInstantiated:
   - {fileID: 0}
   - {fileID: 0}
@@ -168,24 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfcf2538befcd8b44924b387199b0fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionButtonPressed: 0
-  FireRange: 0
-  WaterRange: 0
-  AirRange: 0
-  EarthRange: 0
-  FireInHand: 0
-  WaterInHand: 0
-  AirInHand: 0
-  EarthInHand: 0
-  BrazierPresentRange: 0
-  BrazierPastRange: 0
-  BrazierPastSecondRange: 0
-  ElementOnPresentBrazier: 0
-  ElementOnPastBrazier: 0
-  ElementOnPastSecondBrazier: 0
-  PresentPortalPos: {fileID: 0}
-  PastPortalPos: {fileID: 0}
-  FireIcon: {fileID: 0}
+  interactableObjects: {fileID: 0}
+  elementInHand: 0
   customImage: {fileID: 0}
 --- !u!114 &1820399550
 MonoBehaviour:
@@ -233,7 +215,7 @@ GameObject:
   m_Icon: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7139799182801808353
 Transform:
   m_ObjectHideFlags: 0
@@ -433,32 +415,32 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: d906da42c4f5d624897349db9cca4c52,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.365
+      value: 2.4200134
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d906da42c4f5d624897349db9cca4c52,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.224
+      value: 36.602875
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d906da42c4f5d624897349db9cca4c52,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.705
+      value: 5.1400146
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d906da42c4f5d624897349db9cca4c52,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d906da42c4f5d624897349db9cca4c52,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d906da42c4f5d624897349db9cca4c52,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: d906da42c4f5d624897349db9cca4c52,
         type: 3}
