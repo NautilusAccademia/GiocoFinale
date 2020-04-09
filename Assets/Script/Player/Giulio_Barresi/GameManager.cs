@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public static GameObject playerGameObject;
 
+    [SerializeField] public GameObject playerCamera;
+
     public static Rigidbody playerRb;
 
     public static int Health;
