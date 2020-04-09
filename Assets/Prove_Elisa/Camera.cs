@@ -31,7 +31,7 @@ public class Camera : MonoBehaviour
 
         panCamIsActive = false;
 
-        cameraAn.SetBool("brazierLit", false);
+        
         currentTime = startingTime;
     }
 
@@ -42,13 +42,13 @@ public class Camera : MonoBehaviour
         {
             currentTime -= 1 * Time.deltaTime;
             activePortal = true;
-            cameraAn.SetBool("brazierLit", true);
+            cameraAn.SetTrigger("cameraPan");
             
 
             if (activePortal == true && currentTime <= 0)
             {
                 currentTime = 0;
-                cameraAn.SetBool("brazierLit", false);
+               
             }
         }
 
