@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: "Assets/Scenes/Men\xF9Start.unity"
+    guid: 7bfa0fc750598ee40981ed0493f16c23
+  - enabled: 1
     path: Assets/Scenes/Element.unity
     guid: 98566d794c1703644a6e31edb6d1f669
+  - enabled: 1
+    path: Assets/Scenes/Livello_1.2.unity
+    guid: 9eeb418c8cf09be479fc07dea2a65e9a
+  - enabled: 1
+    path: Assets/Scenes/Livello_1.3.unity
+    guid: 537fede94227c394b9681e7c00d54ba8
   m_configObjects: {}

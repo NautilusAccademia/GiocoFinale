@@ -7,41 +7,14 @@ public class AudioManager : MonoBehaviour
 {
     public static AudioManager instance;
 
-    [SerializeField] AudioClip takeElementClip;
-    [SerializeField] AudioClip useElementClip;
-    [SerializeField] AudioClip takeDamageClip;
     [SerializeField] AudioClip musicGameClip;
-    [SerializeField] AudioClip openDoorClip;
-    [SerializeField] AudioClip portalTransitionClip;
 
-    [SerializeField] AudioMixerGroup musicMixer;
+    [SerializeField] AudioMixerSnapshot present;
+    [SerializeField] AudioMixerSnapshot past;
 
-    private AudioSource itemsSource;
+    [SerializeField]
     private AudioSource musicSource;
 
-    public void PlayTakeElement()
-    {
-        itemsSource.clip = takeElementClip;
-        itemsSource.Play();
-    }
-
-    public void PlayUseElement()
-    {
-        itemsSource.clip = useElementClip;
-        itemsSource.Play();
-    }
-
-    public void PlayOpenDoor()
-    {
-        itemsSource.clip = openDoorClip;
-        itemsSource.Play();
-    }
-
-    public void PlayTakeDamage()
-    {
-        itemsSource.clip = takeDamageClip;
-        itemsSource.Play();
-    }
 
     public void PlayMusicSource()
     {
@@ -49,11 +22,6 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
-    public void PlayPortalTransition()
-    {
-        itemsSource.clip = portalTransitionClip;
-        itemsSource.Play();
-    }
 
     private void Awake()
     {
@@ -63,23 +31,16 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        itemsSource = gameObject.AddComponent<AudioSource>();
-        itemsSource.loop = false;
-
-        musicSource = gameObject.AddComponent<AudioSource>();
-        musicSource.loop = true;
-
-        musicSource.volume = 0.3f;
-
         AudioManager.instance.PlayMusicSource();
     }
-    public void AddMixerGroup()
+    public void PastSnapshot()
     {
-        musicSource.outputAudioMixerGroup = musicMixer;
-    }
+        past.TransitionTo(0.1f);
 
-    public void RemoveMixerGroup()
+    }
+    
+    public void PresentSnapshot()
     {
-        musicSource.outputAudioMixerGroup = null;
+        present.TransitionTo(0.1f);
     }
 }
