@@ -14,8 +14,8 @@ public class PlayerController3 : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetAxis("Horizontal") > 0.5f || Input.GetAxis("Horizontal") < -0.5f
-            || Input.GetAxis("Vertical") > 0.5f || Input.GetAxis("Vertical") < -0.5f)
+        if (Input.GetAxis("Horizontal") > 0.0f || Input.GetAxis("Horizontal") < -0.0f
+            || Input.GetAxis("Vertical") > 0.0f || Input.GetAxis("Vertical") < -0.0f)
         {
             Vector3 Movement = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical")); //Apply the axises to the movement
 
@@ -30,14 +30,10 @@ public class PlayerController3 : MonoBehaviour
         }
 
        if(Input.GetKeyDown(KeyCode.E))
-        {
+       {
             //gameObject.GetComponent<Animation>().Play("Taken");
 
             playerAn.SetTrigger("Taken");
-            
-        }
-
+       }
     }
-
-    
 }
