@@ -13,10 +13,13 @@ public class FireOnBrazier : InteractableObjects
     //public GameManager.Elements myElement;
 
     // Start is called before the first frame update
-    void Start()
+  
+
+    public override void Initialize()
     {
-        portalActivated = false; //elisa
+        portalActivated = false; 
         Fire.SetActive(false);
+
     }
 
     public void SpawnFireOnBrazier()

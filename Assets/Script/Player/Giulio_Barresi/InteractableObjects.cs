@@ -16,9 +16,24 @@ public class InteractableObjects : MonoBehaviour
 
     [SerializeField] Conditions condition;
 
+    private Animator playerAn;
+
+    void Start()
+    {
+        Initialize();
+        playerAn = GameManager.instance.playerGameObject.GetComponent<Animator>();
+    }
+
+   public virtual void Initialize()
+    {
+
+    }
+
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
+        
+        
     }
 
     public void PlayAudioClip()
@@ -36,10 +51,12 @@ public class InteractableObjects : MonoBehaviour
 
     public void Interact()
     {
+
         if (condition == null || condition.CheckCondition())
         {
             if (interacted == false || repeatedMoreTimes == true)
             {
+                playerAn.SetTrigger("Taken");
                 SpecificInteraction();
                 PlayAudioClip();
                 interacted = true;
