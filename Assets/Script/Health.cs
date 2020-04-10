@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-
     public int health;
 
     [SerializeField] GameObject[] healthHUD;
 
-    [SerializeField] float invincibilityTime; // tempo durata invincibilitá
+    [SerializeField] public float invincibilityTime; // tempo durata invincibilitá
     private float currentTime;	// tempo trascorso dall'ultima volta che hai subito danno
 
     private int currentHealthIndex;
+
+    [SerializeField] private float nBlink = 3;    // Numero di lampeggi assegnato nell'Inspector per vedere l'effetto grafico
+    private float blinkTime; // tempo per ogni lampeggio calcolato nello start
+
+    [SerializeField] private SkinnedMeshRenderer meshRenderer; // Salviamo il meshRendere per i futuri utilizzi
+    [SerializeField] private Color colorEnd;
+
     private Animator playerAn;
 
     private void Awake()
@@ -20,7 +26,6 @@ public class Health : MonoBehaviour
         health = healthHUD.Length;
         currentHealthIndex = healthHUD.Length - 1;
         currentTime = invincibilityTime;
-        playerAn = GetComponent<Animator>();
     }
 
     public void DecreaseHealth()
@@ -29,20 +34,61 @@ public class Health : MonoBehaviour
         {
             currentTime = 0;
 
-            if (health == 0)
+            if (health <= 1)
             {
-                return;
-
                 playerAn.SetTrigger("Death");
+                return;
             }
 
             health--;
 
-       
-
             healthHUD[currentHealthIndex].SetActive(false);
             currentHealthIndex--;
 
+            StartCoroutine(DamageGraphicEffect());
+        }
+
+
+    }
+
+
+    IEnumerator DamageGraphicEffect()
+    {
+        float t = 0;
+        //Colore iniziale
+        Color[] colorStart = new Color[meshRenderer.materials.Length];
+
+        for (int i = 0; i < meshRenderer.materials.Length; i++)
+        {
+            colorStart[i] = meshRenderer.materials[i].color;
+        }
+
+        //Cicla per il numero di blink
+        for (int i = 0; i < nBlink; i++)
+        {
+            // I due cicli while formano un blink
+            while (t < blinkTime / 2)
+            {
+                t += Time.deltaTime;
+
+                for (int c = 0; c < meshRenderer.materials.Length; c++)
+                {
+                    meshRenderer.materials[c].color = Color.Lerp(colorStart[c], colorEnd, t / (blinkTime / 2));
+                }
+
+                yield return null;
+            }
+            while (t > 0)
+            {
+                t -= Time.deltaTime;
+
+                for (int c = 0; c < meshRenderer.materials.Length; c++)
+                {
+                    meshRenderer.materials[c].color = Color.Lerp(colorStart[c], colorEnd, t / (blinkTime / 2));
+                }
+
+                yield return null;
+            }
         }
     }
 
@@ -58,6 +104,14 @@ public class Health : MonoBehaviour
         currentHealthIndex++;
         healthHUD[currentHealthIndex].SetActive(true);
 
+    }
+
+
+    private void Start()
+    {
+        //meshRenderer = GetComponent<MeshRenderer>(); // Inizializiamo il meshRenderer
+        blinkTime = invincibilityTime / nBlink; // Calcola il tempo di un blik basandosi sul tempo in cui resti invicibile e il numero di blink che vogliamo moastare
+        playerAn = GetComponent<Animator>();
     }
 
     private void Update()
