@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -37,7 +38,7 @@ public class Health : MonoBehaviour
             if (health <= 1)
             {
                 playerAn.SetTrigger("Death");
-                return;
+                SceneManager.LoadScene(4);
             }
 
             health--;
