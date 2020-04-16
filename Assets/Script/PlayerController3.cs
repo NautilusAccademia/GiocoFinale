@@ -33,14 +33,6 @@ public class PlayerController3 : MonoBehaviour
             {
                 playerAn.SetBool("is_walking", false); //aggiunta elisa
             }
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                //gameObject.GetComponent<Animation>().Play("Taken");
-
-                playerAn.SetTrigger("Taken");
-            }
-
         }
 
         else
