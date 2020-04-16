@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public static Damage damage;
     public static PlayerController3 playerController3;
 
-    public static GameObject playerGameObject;
+    public GameObject playerGameObject;
 
     [SerializeField] public GameObject playerCamera;
 
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         instance = this;
 
         playerController3 = FindObjectOfType<PlayerController3>(); //Find movement script
-        playerGameObject = GameObject.Find("Player"); //Find player GameObject
+       // playerGameObject = GameObject.Find("Player"); //Find player GameObject
         playerRb = playerGameObject.GetComponent<Rigidbody>(); //Find player Rigidbody
 
         playerInteraction = FindObjectOfType<PlayerInteraction>();

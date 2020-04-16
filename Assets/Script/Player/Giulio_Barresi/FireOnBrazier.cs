@@ -11,7 +11,9 @@ public class FireOnBrazier : InteractableObjects
     //public GameManager.Elements myElement;
 
     // Start is called before the first frame update
-    void Start()
+  
+
+    public override void Initialize()
     {
         Fire.SetActive(false);
     }
