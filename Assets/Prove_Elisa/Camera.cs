@@ -32,7 +32,7 @@ public class Camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (FireOnBrazier.portalActivated == true)
+        //if (FireOnBrazier.portalActivated == true)
         {
             currentTime -= 1 * Time.deltaTime;
             activePortal = true;

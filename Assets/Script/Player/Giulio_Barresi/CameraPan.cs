@@ -9,8 +9,6 @@ public class CameraPan : InteractableObjects
     [SerializeField] float WaitOnInteraction = 0.2f;
     [SerializeField] float WaitOnObject = 3;
 
-   
-
     void CameraOnObject()
     {
         objectCamera.SetActive(true);
