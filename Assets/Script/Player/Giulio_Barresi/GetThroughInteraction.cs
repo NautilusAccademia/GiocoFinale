@@ -19,7 +19,7 @@ public class GetThroughInteraction : InteractableObjects
     void PlayerGetThrough()
     {
         StartCoroutine(TransitionSet());//Added by Nanni, starts a couroutine which contains the animation
-        GameManager.playerGameObject.transform.position = pos.transform.position;
+        GameManager.instance.playerGameObject.transform.position = pos.transform.position;
     }
 
     private IEnumerator TransitionSet() //IEnumerator which sets the animation
