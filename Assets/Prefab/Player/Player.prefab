@@ -187,7 +187,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   invincibilityTime: 2
---- !u!114 &5620009500665080315
+--- !u!114 &2236282294274781619
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,7 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9684126f5a6a6b4ba77e2b3e2637730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 4
+  ignoreInput: 0
 --- !u!1 &8837251935993712515
 GameObject:
   m_ObjectHideFlags: 0
