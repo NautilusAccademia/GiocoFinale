@@ -16,6 +16,7 @@ TagManager:
   - PastSecondBrazier
   - Brazier
   - Damage
+  - Platform
   layers:
   - Default
   - TransparentFX
