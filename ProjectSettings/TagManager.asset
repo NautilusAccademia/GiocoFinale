@@ -16,6 +16,7 @@ TagManager:
   - PastSecondBrazier
   - Brazier
   - Damage
+  - Graffiti
   layers:
   - Default
   - TransparentFX

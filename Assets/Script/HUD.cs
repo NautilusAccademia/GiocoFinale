@@ -17,6 +17,8 @@ public class HUD : MonoBehaviour
 
     [SerializeField] public Image infoEImage;
 
+    [SerializeField] public Image infoZImage;
+
     public static HUD instance;
 
     private void Awake()
