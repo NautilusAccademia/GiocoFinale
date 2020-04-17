@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c202f82e3b297164baf78baac959e0d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushPower: 6
+  pushPower: 4
   pushDelay: 0.1
 --- !u!1 &2053185546474364570
 GameObject:
