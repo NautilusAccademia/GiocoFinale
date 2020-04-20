@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -33,23 +34,19 @@ public class Health : MonoBehaviour
         if (currentTime > invincibilityTime)
         {
             currentTime = 0;
-            if(health > 0)
-            {
-                health--;
 
-                healthHUD[currentHealthIndex].SetActive(false);
-                currentHealthIndex--;
-
-                StartCoroutine(DamageGraphicEffect());
-            }
-            if (health == 0)
+            if (health <= 1)
             {
                 playerAn.SetTrigger("Death");
-                GameManager.playerController3.StartIgnoreInput();
-                return;
+                SceneManager.LoadScene(4);
             }
 
-            
+            health--;
+
+            healthHUD[currentHealthIndex].SetActive(false);
+            currentHealthIndex--;
+
+            StartCoroutine(DamageGraphicEffect());
         }
 
 

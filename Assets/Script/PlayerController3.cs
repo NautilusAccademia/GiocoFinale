@@ -9,8 +9,6 @@ public class PlayerController3 : MonoBehaviour
 
     public bool ignoreInput = false;
 
-    private int nIgnore = 0;
-
     private void Start()
     {
         playerAn = GetComponent<Animator>(); //aggiunta elisa
@@ -35,14 +33,6 @@ public class PlayerController3 : MonoBehaviour
             {
                 playerAn.SetBool("is_walking", false); //aggiunta elisa
             }
-
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                //gameObject.GetComponent<Animation>().Play("Taken");
-
-                playerAn.SetTrigger("Taken");
-            }
-
         }
 
         else
@@ -53,24 +43,12 @@ public class PlayerController3 : MonoBehaviour
 
     public void StartIgnoreInput()
     {
-        if(ignoreInput)
-        {
-            nIgnore++;
-        }
-
         ignoreInput = true;
     }
 
     public void EndIgnoreInput()
     {
-        if(ignoreInput && nIgnore > 0)
-        {
-            nIgnore--;
-        }
-        else
-        {
-            ignoreInput = false;
-        }
+        ignoreInput = false;
     }
 
     public IEnumerator EndIgnoreInputAfterCoroutine(float seconds)
