@@ -9,6 +9,11 @@ public class PlayerController3 : MonoBehaviour
 
     public bool ignoreInput = false;
 
+    [SerializeField] Transform groudPosition;
+    [SerializeField] float rangeGroundCheck;
+    [SerializeField] bool showGroundCheck;
+    GameObject lastPlatform;
+
     private void Start()
     {
         playerAn = GetComponent<Animator>(); //aggiunta elisa
@@ -38,6 +43,42 @@ public class PlayerController3 : MonoBehaviour
         else
         {
             playerAn.SetBool("is_walking", false); //aggiunta elisa
+        }
+
+        Collider[] colliders = Physics.OverlapBox(groudPosition.position, new Vector3(rangeGroundCheck, rangeGroundCheck, rangeGroundCheck));
+        GameObject tempPlatform = null;
+        bool lastPlatformPresent = false;
+        foreach (Collider collider in colliders)
+        {
+            if (collider.tag == "Platform")
+            {
+                tempPlatform = collider.gameObject;
+                if (lastPlatform != null && tempPlatform == lastPlatform)
+                {
+                    lastPlatformPresent = true;
+                    break;
+                }
+            }
+        }
+        if (!lastPlatformPresent)
+        {
+            lastPlatform = tempPlatform;
+        }
+        if (lastPlatform != null)
+        {
+            transform.parent = lastPlatform.transform;
+        }
+        else
+        {
+            transform.parent = null;
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (showGroundCheck)
+        {
+            Gizmos.DrawCube(groudPosition.position, new Vector3(rangeGroundCheck, rangeGroundCheck, rangeGroundCheck));
         }
     }
 
