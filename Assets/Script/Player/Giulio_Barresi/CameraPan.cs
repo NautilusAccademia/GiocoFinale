@@ -13,12 +13,14 @@ public class CameraPan : InteractableObjects
     {
         objectCamera.SetActive(true);
         GameManager.instance.playerCamera.SetActive(false);
+        GameManager.playerController3.StartIgnoreInput();
     }
 
     void CameraOnPlayer()
     {
         objectCamera.SetActive(false);
         GameManager.instance.playerCamera.SetActive(true);
+        GameManager.playerController3.EndIgnoreInput();
     }
 
     IEnumerator Pan()
