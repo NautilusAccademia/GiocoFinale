@@ -1,28 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class FireOnBrazier : InteractableObjects
+public class DisableTraps : InteractableObjects
 {
-    [SerializeField]
-    public GameObject Fire;
+    [SerializeField] public GameObject BigStone;
 
     public override void Initialize()
     {
-        Fire.SetActive(false);
+        BigStone.SetActive(false);
     }
 
-    public void SpawnFireOnBrazier()
+    public void SpawnBigStoneOnTrap()
     {
-        Fire.SetActive(true);
+        BigStone.SetActive(true);
         InteractiveElement.instance.DestroyElement();
-        HUD.instance.HideFireHUD();   
+        HUD.instance.HideEarthHUD();
     }
 
     public override void SpecificInteraction()
     {
         base.SpecificInteraction();
-        SpawnFireOnBrazier();
+        SpawnBigStoneOnTrap();
     }
+
 }

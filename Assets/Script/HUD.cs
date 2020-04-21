@@ -62,7 +62,7 @@ public class HUD : MonoBehaviour
         ElementHUDAir.enabled = false;
     }
 
-    /*public void ShowEarthHUD()
+    public void ShowEarthHUD()
     {
         ElementHUDEmpty.enabled = false;
         ElementHUDEarth.enabled = true;
@@ -72,5 +72,5 @@ public class HUD : MonoBehaviour
     {
         ElementHUDEmpty.enabled = true;
         ElementHUDEarth.enabled = false;
-    }*/
+    }
 }

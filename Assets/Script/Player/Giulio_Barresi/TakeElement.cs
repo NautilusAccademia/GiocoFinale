@@ -20,6 +20,11 @@ public class TakeElement : InteractableObjects
             HUD.instance.ShowAirHUD();
             GameManager.interactiveElement.SpawnAir();
         }
+        if (elementToTake == GameManager.Elements.Earth)
+        {
+            HUD.instance.ShowEarthHUD();
+            GameManager.interactiveElement.SpawnEarth();
+        }
     }
 
     public override void SpecificInteraction()
