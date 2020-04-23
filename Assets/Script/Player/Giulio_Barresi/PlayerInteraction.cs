@@ -26,15 +26,10 @@ public class PlayerInteraction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        /*FireInHand = false;
-        WaterInHand = false;
-        AirInHand = false;
-        EarthInHand = false;*/
-
         HUD.instance.HideFireHUD();
         //HUD.instance.HideWaterHUD();
         HUD.instance.HideAirHUD();
-        //HUD.instance.HideEarthHUD();
+        HUD.instance.HideEarthHUD();
     }
 
     // Update is called once per frame
@@ -57,7 +52,7 @@ public class PlayerInteraction : MonoBehaviour
             HUD.instance.HideFireHUD();
             //HUD.instance.HideWaterHUD();
             HUD.instance.HideAirHUD();
-            //HUD.instance.HideEarthHUD();
+            HUD.instance.HideEarthHUD();
 
             //WaterInHand = false;
             //AirInHand = false;

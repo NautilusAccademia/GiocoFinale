@@ -49,3 +49,4 @@ MonoBehaviour:
   ElementHUDEarth: {fileID: 0}
   ElementHUDEmpty: {fileID: 0}
   infoEImage: {fileID: 0}
+  infoZImage: {fileID: 0}
