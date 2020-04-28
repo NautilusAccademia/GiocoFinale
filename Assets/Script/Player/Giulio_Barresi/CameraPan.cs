@@ -25,10 +25,12 @@ public class CameraPan : InteractableObjects
 
     IEnumerator Pan()
     {
-        yield return new WaitForSeconds(WaitOnInteraction);
-        CameraOnObject();
-        yield return new WaitForSeconds(WaitOnObject);
-        CameraOnPlayer();
+       {
+           yield return new WaitForSeconds(WaitOnInteraction);
+           CameraOnObject();
+           yield return new WaitForSeconds(WaitOnObject);
+           CameraOnPlayer();
+       } 
     }
 
     public override void SpecificInteraction()
