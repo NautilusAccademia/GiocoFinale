@@ -14,6 +14,7 @@ public class FalsePickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioManager.instance.PlayCollectible();
             Destroy(gameObject);
         }
     }
