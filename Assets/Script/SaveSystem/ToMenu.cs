@@ -15,5 +15,11 @@ public class ToMenu : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
+    //Nanni
+    public void ExitGame()//Method that quits the game
+    {
+        Application.Quit();//Quits the player from application
+    }
+
   
 }
