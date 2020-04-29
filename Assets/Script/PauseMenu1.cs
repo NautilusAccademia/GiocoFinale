@@ -52,5 +52,6 @@ public class PauseMenu1 : MonoBehaviour
     public void OpenStartMenu()//method that opens the start menu
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
     }
 }
