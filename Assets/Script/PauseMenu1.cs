@@ -10,7 +10,7 @@ public class PauseMenu1 : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))//if the P button is pressed
+        if(Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))//if the P button is pressed
         {
             if(GameIsPaused == false)//and if the game is considered paused
             {
