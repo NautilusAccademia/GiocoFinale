@@ -7,6 +7,13 @@ public class Damage : MonoBehaviour
     [SerializeField] float pushPower;
     [SerializeField] float pushDelay;
 
+    public static Damage instance;
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")

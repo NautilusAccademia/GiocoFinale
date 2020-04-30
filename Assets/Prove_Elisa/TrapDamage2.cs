@@ -5,19 +5,20 @@ using UnityEngine;
 public class TrapDamage2 : MonoBehaviour
 {
     public Animator trapAn;
-    
-   
 
+    [SerializeField] GameObject stoneToDeactive;
 
-
+    [SerializeField] Collider collider;
 
 
     // Start is called before the first frame update
     void Start()
     {
-       // trapAn = GetComponent<Animator>();
-        
+        // trapAn = GetComponent<Animator>();
 
+        stoneToDeactive.SetActive(false);
+        collider.enabled = true;
+        Damage.instance.enabled = true;
     }
 
     void OnTriggerEnter(Collider other)
@@ -54,6 +55,11 @@ public class TrapDamage2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (stoneToDeactive.activeInHierarchy)
+        {
+            trapAn.SetTrigger("trapInactive");
+            collider.enabled = false;
+            Damage.instance.enabled = false;
+        }
     }
 }
