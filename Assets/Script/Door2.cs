@@ -12,9 +12,13 @@ public class Door2 : MonoBehaviour
     [SerializeField] GameObject[] conditionToOpenDoors;
 
     [SerializeField] AudioNonInteractiveObject audioDoor;
+
+    [SerializeField] Collider collider;
     private void Start()
     {
         isOpen = false;
+
+        collider.enabled = false;
 
         anim = GetComponent<Animator>(); //Get the component Animator of the Door
         //Explain = GameObject.Find("Explanation").GetComponent<Text>();//Get the explanation...
@@ -26,8 +30,7 @@ public class Door2 : MonoBehaviour
         if (!isOpen)
         {
             OpenDoor();
-        }
-        
+        }    
     }
 
     /*private void OnTriggerStay(Collider other)
@@ -40,8 +43,8 @@ public class Door2 : MonoBehaviour
     }*/
 
     void OpenDoor()
-    {
-        
+    {       
+
         foreach (GameObject gameObject in conditionToOpenDoors)
         {
             if (gameObject.activeInHierarchy == false)
@@ -55,6 +58,7 @@ public class Door2 : MonoBehaviour
         //Explain.enabled = false; //the explaination is disabled once again    
         
         audioDoor.PlayAudioClip();
+        collider.enabled = true;
 
         //Explain.enabled = true; //show the explaination
     }

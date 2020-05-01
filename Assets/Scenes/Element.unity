@@ -4296,6 +4296,7 @@ MonoBehaviour:
   - {fileID: 728219800}
   - {fileID: 1162310847}
   audioDoor: {fileID: 639511658}
+  collider: {fileID: 2083064374}
 --- !u!65 &639511657
 BoxCollider:
   m_ObjectHideFlags: 0
