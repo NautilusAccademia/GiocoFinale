@@ -25,15 +25,13 @@ public class InteractableObjects : MonoBehaviour
     }
 
    public virtual void Initialize()
-    {
+   {
 
-    }
+   }
 
     void Awake()
     {
-        audioSource = GetComponent<AudioSource>();
-        
-        
+        audioSource = GetComponent<AudioSource>();  
     }
 
     public void PlayAudioClip()

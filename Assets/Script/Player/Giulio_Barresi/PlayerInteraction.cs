@@ -45,7 +45,7 @@ public class PlayerInteraction : MonoBehaviour
 
     void ThrowElement()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.V))
         {
             //FireInHand = false;
             elementInHand = GameManager.Elements.None;
