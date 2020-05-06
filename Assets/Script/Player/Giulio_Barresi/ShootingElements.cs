@@ -8,6 +8,13 @@ public class ShootingElements : MonoBehaviour
 
     [SerializeField] ParticleSystem air;
 
+    [SerializeField] GameObject airGun;
+
+    private void Start()
+    {
+        airGun.SetActive(false);
+    }
+
     private void Update()
     {
         ShootingAir();
@@ -17,7 +24,12 @@ public class ShootingElements : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && condition.CheckCondition())
         {
+            airGun.SetActive(true);
             air.Play(true);
+        }
+        if (air.isStopped)
+        {
+            airGun.SetActive(false);
         }
     }
 }
