@@ -38,7 +38,13 @@ public class Health : MonoBehaviour
             if (health <= 1)
             {
                 playerAn.SetTrigger("Death");
-                SceneManager.LoadScene(4);
+
+                if (health == 1)
+                {
+                    SceneManager.LoadScene(4);
+                }
+                
+
             }
 
             health--;
@@ -49,6 +55,7 @@ public class Health : MonoBehaviour
             StartCoroutine(DamageGraphicEffect());
         }
 
+      
 
     }
 

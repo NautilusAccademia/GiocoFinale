@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Livello_1.2.unity
     guid: 9eeb418c8cf09be479fc07dea2a65e9a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Livello_1.3.unity
     guid: 537fede94227c394b9681e7c00d54ba8
   - enabled: 1
