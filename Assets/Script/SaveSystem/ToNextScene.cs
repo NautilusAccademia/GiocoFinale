@@ -16,6 +16,7 @@ public class ToNextScene : MonoBehaviour
     private void OnTriggerEnter(Collider collision)
     {
         SceneManager.LoadScene(nextScenetoLoad);
+        PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     // Update is called once per frame
