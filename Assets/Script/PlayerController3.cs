@@ -19,7 +19,7 @@ public class PlayerController3 : MonoBehaviour
         playerAn = GetComponent<Animator>(); //aggiunta elisa
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (!ignoreInput)
         {
