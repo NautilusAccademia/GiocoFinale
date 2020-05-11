@@ -11,6 +11,7 @@ public class CameraPan : InteractableObjects
 
     void CameraOnObject()
     {
+        HUD.instance.infoEImage.enabled = false;
         objectCamera.SetActive(true);
         GameManager.instance.playerCamera.SetActive(false);
         GameManager.playerController3.StartIgnoreInput();
