@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public static AudioManager audioManager;
     public static Door2 door2;
     public static Damage damage;
-    public static PlayerController3 playerController3;
+    public static PlayerController4 playerController4;
 
     public GameObject playerGameObject;
 
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
 
-        playerController3 = FindObjectOfType<PlayerController3>(); //Find movement script
+        playerController4 = FindObjectOfType<PlayerController4>(); //Find movement script
        // playerGameObject = GameObject.Find("Player"); //Find player GameObject
         playerRb = playerGameObject.GetComponent<Rigidbody>(); //Find player Rigidbody
 

@@ -14,14 +14,14 @@ public class CameraPan : InteractableObjects
         HUD.instance.infoEImage.enabled = false;
         objectCamera.SetActive(true);
         GameManager.instance.playerCamera.SetActive(false);
-        GameManager.playerController3.StartIgnoreInput();
+        GameManager.playerController4.StartIgnoreInput();
     }
 
     void CameraOnPlayer()
     {
         objectCamera.SetActive(false);
         GameManager.instance.playerCamera.SetActive(true);
-        GameManager.playerController3.EndIgnoreInput();
+        GameManager.playerController4.EndIgnoreInput();
     }
 
     IEnumerator Pan()

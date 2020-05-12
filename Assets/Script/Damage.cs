@@ -33,10 +33,16 @@ public class Damage : MonoBehaviour
     {
         Vector3 direction = (rigidbody.transform.position - transform.position);
         direction = new Vector3(direction.x, 0, direction.z).normalized;
-        rigidbody.gameObject.GetComponent<PlayerController3>().StartIgnoreInput(); //riga per ignorare i controlli
-        rigidbody.AddForce(direction * pushPower, ForceMode.Impulse);
-        StartCoroutine(rigidbody.gameObject.GetComponent<PlayerController3>().EndIgnoreInputAfterCoroutine(
+        rigidbody.gameObject.GetComponent<PlayerController4>().StartIgnoreInput(); //riga per ignorare i controlli
+        StartCoroutine(push(direction, rigidbody));
+        StartCoroutine(rigidbody.gameObject.GetComponent<PlayerController4>().EndIgnoreInputAfterCoroutine(
             rigidbody.gameObject.GetComponent<Health>().invincibilityTime));
+    }
+
+    IEnumerator push(Vector3 direction, Rigidbody rigidbody)
+    {
+        yield return null;
+        rigidbody.AddForce(direction * pushPower, ForceMode.Impulse);
     }
 
 }

@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController3 : MonoBehaviour
+public class PlayerController4 : MonoBehaviour
 {
-    public float speed = 4; //Player's speed
+    public float acceleration;
     private Animator playerAn;
 
     public bool ignoreInput = false;
@@ -12,34 +12,56 @@ public class PlayerController3 : MonoBehaviour
     [SerializeField] Transform groudPosition;
     [SerializeField] float rangeGroundCheck;
     [SerializeField] bool showGroundCheck;
+
     GameObject lastPlatform;
 
-    private void Start()
+    Rigidbody rb;
+
+    //public float maxVelocity;
+
+    // Start is called before the first frame update
+    void Start()
     {
+        rb = GetComponent<Rigidbody>();
         playerAn = GetComponent<Animator>(); //aggiunta elisa
     }
 
-    private void FixedUpdate()
+    // Update is called once per frame
+    void FixedUpdate()
     {
         if (!ignoreInput)
         {
-
             if (Input.GetAxis("Horizontal") > 0.0f || Input.GetAxis("Horizontal") < -0.0f
                 || Input.GetAxis("Vertical") > 0.0f || Input.GetAxis("Vertical") < -0.0f)
             {
-                Vector3 Movement = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical")); //Apply the axises to the movement
+                float assX = Input.GetAxis("Horizontal");
 
-                transform.rotation = Quaternion.LookRotation(Movement); //The player will rotate according to its movement 
-                transform.Translate(Movement * speed * Time.deltaTime, Space.World); //move the player 
+                float assZ = Input.GetAxis("Vertical");
+
+                Vector3 direction = new Vector3(assX, 0, assZ).normalized;
+
+                transform.rotation = Quaternion.LookRotation(direction);
+
+                rb.velocity = new Vector3(direction.x * acceleration * Time.fixedDeltaTime, rb.velocity.y, direction.z * acceleration * Time.fixedDeltaTime);
+  
+                /*if(rb.velocity.magnitude > maxVelocity)
+                {
+                    rb.velocity = rb.velocity.normalized * maxVelocity;
+                }
+                else
+                {
+                    rb.AddForce(direction * acceleration * Time.fixedDeltaTime);
+                }*/
+
                 playerAn.SetBool("is_walking", true); //aggiunta elisa
             }
-
             else
             {
                 playerAn.SetBool("is_walking", false); //aggiunta elisa
             }
-        }
 
+            //rb.AddForce(direction * speed);
+        }
         else
         {
             playerAn.SetBool("is_walking", false); //aggiunta elisa
@@ -73,7 +95,6 @@ public class PlayerController3 : MonoBehaviour
             transform.parent = null;
         }
     }
-
     private void OnDrawGizmos()
     {
         if (showGroundCheck)
@@ -81,7 +102,6 @@ public class PlayerController3 : MonoBehaviour
             Gizmos.DrawCube(groudPosition.position, new Vector3(rangeGroundCheck, rangeGroundCheck, rangeGroundCheck));
         }
     }
-
     public void StartIgnoreInput()
     {
         ignoreInput = true;
@@ -95,6 +115,6 @@ public class PlayerController3 : MonoBehaviour
     public IEnumerator EndIgnoreInputAfterCoroutine(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        //GameManager.playerController3.EndIgnoreInput();
+        GameManager.playerController4.EndIgnoreInput();
     }
 }

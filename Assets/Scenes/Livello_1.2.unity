@@ -2869,6 +2869,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4493469713963218994, guid: fb2348b892f0492429564a47aabb3793,
+        type: 3}
+      propertyPath: pushDelay
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8303187540954764752, guid: fb2348b892f0492429564a47aabb3793,
         type: 3}
       propertyPath: stoneToDeactive
