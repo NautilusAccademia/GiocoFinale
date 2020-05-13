@@ -4771,7 +4771,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2028112200
 Transform:
   m_ObjectHideFlags: 0
@@ -4855,6 +4855,8 @@ GameObject:
   - component: {fileID: 550997352418579893}
   - component: {fileID: 2322142800348515986}
   - component: {fileID: 3992487524991411515}
+  - component: {fileID: 1850459203208028778}
+  - component: {fileID: 6698257883701194667}
   m_Layer: 0
   m_Name: braciere_sano_1:Group6706_nurbsCircle1
   m_TagString: Untagged
@@ -4902,7 +4904,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -6769326663605264443, guid: d03ac746dd964af46ad9e7b33860bb39, type: 3}
+  - {fileID: 2100000, guid: 3259e78036bda3c468e6dc243c2a659a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4923,6 +4925,33 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &1850459203208028778
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7864769856364483922}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 2.24
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6698257883701194667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7864769856364483922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16020f7556e3cee49a15e675f12031cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ParticleTip: {fileID: 0}
 --- !u!1 &9101735440379205705
 GameObject:
   m_ObjectHideFlags: 0
@@ -4986,10 +5015,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6fb944373607aa44e8ec4acf1ce99586, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 0}
+  repeatedMoreTimes: 0
+  condition: {fileID: 0}
   Fire: {fileID: 4448758256709170460}
-  PlayerInRange: 0
-  customImage: {fileID: 0}
-  myElement: 0
 --- !u!136 &250321385
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -5016,6 +5045,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbdc1344b84a6784cbe5a77896c5beae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 0}
+  repeatedMoreTimes: 0
+  condition: {fileID: 0}
   objectsToActive:
   - {fileID: 0}
   objectsToDeactive: []
