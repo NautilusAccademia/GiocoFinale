@@ -168,7 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16020f7556e3cee49a15e675f12031cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ParticleTip: {fileID: 981630523815445964}
+  mat: {fileID: 0}
+  isGlowing: 0
 --- !u!1 &981630523815445964
 GameObject:
   m_ObjectHideFlags: 0
@@ -4935,6 +4936,7 @@ GameObject:
   - component: {fileID: 981630523025626428}
   - component: {fileID: 981630523025626430}
   - component: {fileID: 981630523025626429}
+  - component: {fileID: 1706796930}
   m_Layer: 0
   m_Name: Portale_Passato
   m_TagString: PastPortal
@@ -5081,8 +5083,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08eeaa0abfa017d4bb72e3cfbbeb9fe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: fd84c4665dbf05c4ea0ce1afd63d20eb, type: 3}
-  repeatedMoreTimes: 1
-  condition: {fileID: 0}
   transition: {fileID: 0}
   pos: {fileID: 0}
+--- !u!114 &1706796930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9132911729927758353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91996a05c6207984e8b8e32305cc86b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditions: []
+  interactableObjects:
+  - {fileID: 981630523025626429}
+  audioClip: {fileID: 8300000, guid: fd84c4665dbf05c4ea0ce1afd63d20eb, type: 3}
+  repeatedMoreTimes: 1

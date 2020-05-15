@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1334519379}
   - component: {fileID: 7157984748550448085}
   - component: {fileID: 1517255620}
+  - component: {fileID: 622020241}
   m_Layer: 0
   m_Name: Fire 3
   m_TagString: Fire
@@ -294,7 +295,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 10
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -4790,9 +4791,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e33c60cbf65d4c4fb444088061cb869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 422c9c5a025888e438a86162235e42f9, type: 3}
-  repeatedMoreTimes: 1
-  condition: {fileID: 7157984748550448085}
   elementToTake: 1
 --- !u!82 &-453029650372447003
 AudioSource:
@@ -4938,7 +4936,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 1.0774255
   MaxDistance: 6
   Pan2D: 0
   rolloffMode: 0
@@ -5014,6 +5012,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &622020241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3518185620621399233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91996a05c6207984e8b8e32305cc86b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditions:
+  - {fileID: 7157984748550448085}
+  interactableObjects:
+  - {fileID: 3724682171607275880}
+  audioClip: {fileID: 8300000, guid: 422c9c5a025888e438a86162235e42f9, type: 3}
+  repeatedMoreTimes: 1
 --- !u!1 &3518185620809892805
 GameObject:
   m_ObjectHideFlags: 0

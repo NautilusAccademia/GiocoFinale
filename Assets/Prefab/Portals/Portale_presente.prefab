@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &450887825
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 450887826}
+  m_Layer: 0
+  m_Name: LookAt
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &450887826
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450887825}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.85, y: 0.859, z: 0.178}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2276365839705351115}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3011816830826074584
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,13 +42,15 @@ GameObject:
   - component: {fileID: 6552159550637060194}
   - component: {fileID: 6552159550637060204}
   - component: {fileID: 6552159550637060205}
+  - component: {fileID: 8296172668641489137}
+  - component: {fileID: 8296172668641489138}
   m_Layer: 0
   m_Name: Portale_presente
   m_TagString: PresentPortal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2276365839705351115
 Transform:
   m_ObjectHideFlags: 0
@@ -26,13 +58,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3011816830826074584}
-  m_LocalRotation: {x: -0, y: -0.35116288, z: -0, w: 0.9363144}
+  m_LocalRotation: {x: 0, y: -0.35116354, z: 0, w: 0.93631417}
   m_LocalPosition: {x: -3.1, y: 0.34299994, z: -14.47}
   m_LocalScale: {x: 0.65490174, y: 1.3997515, z: 0.7861145}
   m_Children:
   - {fileID: 8684879957825274591}
   - {fileID: 6552159550179273374}
   - {fileID: 6552159550339414908}
+  - {fileID: 450887826}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -41.117, z: 0}
@@ -158,11 +191,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08eeaa0abfa017d4bb72e3cfbbeb9fe3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: fd84c4665dbf05c4ea0ce1afd63d20eb, type: 3}
-  repeatedMoreTimes: 1
-  condition: {fileID: 0}
   transition: {fileID: 0}
   pos: {fileID: 0}
+--- !u!114 &8296172668641489137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3011816830826074584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91996a05c6207984e8b8e32305cc86b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditions: []
+  interactableObjects:
+  - {fileID: 6552159550637060205}
+  audioClip: {fileID: 8300000, guid: fd84c4665dbf05c4ea0ce1afd63d20eb, type: 3}
+  repeatedMoreTimes: 1
+--- !u!114 &8296172668641489138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3011816830826074584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32694e41de203c14fa3cad0b95e88147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elementofCondition: 1
 --- !u!1 &6552159550126936654
 GameObject:
   m_ObjectHideFlags: 0
@@ -4992,7 +5052,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16020f7556e3cee49a15e675f12031cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ParticleTip: {fileID: 6552159550126936654}
+  mat: {fileID: 0}
+  isGlowing: 0
 --- !u!136 &6552159550339414911
 CapsuleCollider:
   m_ObjectHideFlags: 0

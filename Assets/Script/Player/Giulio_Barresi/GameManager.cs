@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
         None, Fire, Water, Air, Earth
     }
 
-    public List<InteractableObjects> interactableObjectsList = new List<InteractableObjects>();
+    public List<InteractBy> interactByList = new List<InteractBy>();
 
     private void Awake()
     {
@@ -64,11 +64,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (interactableObjectsList != null && Input.GetKeyDown(KeyCode.E))
+        if (interactByList != null && Input.GetKeyDown(KeyCode.E))
         {
-            foreach(InteractableObjects interactableObjects in interactableObjectsList)
+            foreach(InteractBy interactBy in interactByList)
             {
-                interactableObjects.Interact();
+                interactBy.Interact();
             }            
         }
     }
