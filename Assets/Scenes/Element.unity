@@ -32576,6 +32576,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: VAso_Piante
       objectReference: {fileID: 0}
+    - target: {fileID: 750299961938980002, guid: d8a2f5599d204d54fb6af448a056fdbc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4337740566026149553, guid: d8a2f5599d204d54fb6af448a056fdbc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -40250,6 +40255,11 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 1.2
       objectReference: {fileID: 0}
+    - target: {fileID: 7864769856364483922, guid: cebef336ae7ad3e46b30a5a6be8439a6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 9101735440379205705, guid: cebef336ae7ad3e46b30a5a6be8439a6,
         type: 3}
       propertyPath: m_Name
@@ -40551,6 +40561,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1217182727922193396, guid: ac22d5be7d209664b9b6f512c17dfcf9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1561214474190173480, guid: ac22d5be7d209664b9b6f512c17dfcf9,
         type: 3}
