@@ -31,8 +31,8 @@ public class PlayerController4 : MonoBehaviour
     {
         if (!ignoreInput)
         {
-            if (Input.GetAxis("Horizontal") > 0.0f || Input.GetAxis("Horizontal") < -0.0f
-                || Input.GetAxis("Vertical") > 0.0f || Input.GetAxis("Vertical") < -0.0f)
+            if (Input.GetAxisRaw("Horizontal") > 0.0f || Input.GetAxisRaw("Horizontal") < -0.0f
+                || Input.GetAxisRaw("Vertical") > 0.0f || Input.GetAxisRaw("Vertical") < -0.0f)
             {
                 float assX = Input.GetAxis("Horizontal");
 
