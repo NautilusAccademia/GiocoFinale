@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 4245041410729183049}
   - component: {fileID: 5166310559621660031}
   - component: {fileID: 1481373663848743302}
+  - component: {fileID: 8630728884691530867}
+  - component: {fileID: 931481428949358020}
   m_Layer: 0
   m_Name: FAlo_teschi_definitivo
   m_TagString: Untagged
@@ -58,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 759486041625641185, guid: 613139350d1b40a40982417ccd66ab88, type: 3}
+  - {fileID: 2100000, guid: 3259e78036bda3c468e6dc243c2a659a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,3 +81,31 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8630728884691530867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914850243604968794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16020f7556e3cee49a15e675f12031cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mat: {fileID: 0}
+  isGlowing: 0
+--- !u!136 &931481428949358020
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914850243604968794}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 1.51
+  m_Height: 1.4200003
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0.28}
