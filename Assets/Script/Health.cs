@@ -35,17 +35,8 @@ public class Health : MonoBehaviour
         {
             currentTime = 0;
 
-            if (health <= 1)
-            {
-                playerAn.SetTrigger("Death");
-
-                if (health == 1)
-                {
-                    SceneManager.LoadScene(4);
-                }
-                
-
-            }
+           
+           
 
             health--;
 
@@ -55,10 +46,14 @@ public class Health : MonoBehaviour
             StartCoroutine(DamageGraphicEffect());
         }
 
-      
+
 
     }
-
+  
+       public IEnumerator WaitASec(float timeToWait)
+      {
+          yield return new WaitForSeconds(timeToWait); // serve per creare il tempo giusto prima di far partire la scena della morte con una quantità di tempo
+      }
 
     IEnumerator DamageGraphicEffect()
     {
@@ -97,6 +92,19 @@ public class Health : MonoBehaviour
 
                 yield return null;
             }
+        }
+
+        if (health <= 1)
+        {
+            playerAn.SetTrigger("Death");
+
+            if (health == 1)
+            {
+                yield return StartCoroutine(WaitASec(5)); //aspetta 5 secondi prima di far aprire la scena successiva.
+                SceneManager.LoadScene(4);
+            }
+
+
         }
     }
 
