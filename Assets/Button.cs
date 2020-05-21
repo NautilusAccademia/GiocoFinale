@@ -16,7 +16,7 @@ public class Button : MonoBehaviour
         buttonAn = GetComponent<Animator>();
     }
 
-    void OnTriggerStay(Collider other)
+    void OnTriggerEnter(Collider other)
     {
 
         //buttonAn.SetTrigger("buttonPushed");

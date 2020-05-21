@@ -24587,20 +24587,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3869419483139242669}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &1164018002
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1164017992}
-  m_Material: {fileID: 13400000, guid: c2554066bce14724db4b05ee64f9de75, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.03825482
-  m_Height: 0.08450316
-  m_Direction: 1
-  m_Center: {x: 0.0028218918, y: 0.031144755, z: -0.002086355}
 --- !u!1001 &1166821975
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43406,14 +43392,6 @@ PrefabInstance:
       propertyPath: customImage
       value: 
       objectReference: {fileID: 1738757372}
-    - target: {fileID: 318845415, guid: bec889760792b394580a366808b2af1b, type: 3}
-      propertyPath: m_Height
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 318845415, guid: bec889760792b394580a366808b2af1b, type: 3}
-      propertyPath: m_Center.y
-      value: 0.55
-      objectReference: {fileID: 0}
     - target: {fileID: 1820399550, guid: bec889760792b394580a366808b2af1b, type: 3}
       propertyPath: healthHUD.Array.data[0]
       value: 
