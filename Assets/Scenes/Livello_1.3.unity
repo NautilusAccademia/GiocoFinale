@@ -4322,6 +4322,14 @@ PrefabInstance:
       propertyPath: rangeGroundCheck
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 1164017994, guid: bec889760792b394580a366808b2af1b, type: 3}
+      propertyPath: tr
+      value: 
+      objectReference: {fileID: 6729907}
+    - target: {fileID: 1164017994, guid: bec889760792b394580a366808b2af1b, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1922086886}
     - target: {fileID: 1820399550, guid: bec889760792b394580a366808b2af1b, type: 3}
       propertyPath: healthHUD.Array.data[0]
       value: 

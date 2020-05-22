@@ -97,13 +97,14 @@ public class Health : MonoBehaviour
         if (health <= 0)
         {
             playerAn.SetTrigger("Death");
+            GameManager.playerController4.StartIgnoreInput(); //ignora l'input del giocatore
+            yield return StartCoroutine(WaitASec(2)); //aspetta 5 secondi prima di far aprire la scena successiva.
+            SceneManager.LoadScene(4);
 
-            if (health == 0)
+            /*if (health == 0)
             {
-                GameManager.playerController4.StartIgnoreInput(); //ignora l'input del giocatore
-                yield return StartCoroutine(WaitASec(5)); //aspetta 5 secondi prima di far aprire la scena successiva.
-                SceneManager.LoadScene(4);
-            }
+                
+            }*/
 
 
         }
