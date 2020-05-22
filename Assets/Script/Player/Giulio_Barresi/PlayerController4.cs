@@ -10,7 +10,7 @@ public class PlayerController4 : MonoBehaviour
     public bool ignoreInput = false;
 
     [SerializeField] Transform groudPosition;
-    [SerializeField] float rangeGroundCheck;
+    [SerializeField] float rangeGroundCheck = 0.1f;
     [SerializeField] bool showGroundCheck;
 
     GameObject lastPlatform;
