@@ -7,6 +7,11 @@ public class PlayerController4 : MonoBehaviour
     public float acceleration;
     private Animator playerAn;
 
+    public float maxFallDistance = 0f;
+
+    public Transform tr;
+    public Transform spawnPoint;
+
     public bool ignoreInput = false;
 
     [SerializeField] Transform groudPosition;
@@ -22,6 +27,7 @@ public class PlayerController4 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        maxFallDistance = spawnPoint.position.y - 5f;
         rb = GetComponent<Rigidbody>();
         playerAn = GetComponent<Animator>(); //aggiunta elisa
     }
@@ -94,12 +100,19 @@ public class PlayerController4 : MonoBehaviour
         {
             transform.parent = null;
         }
+
+        if(tr.position.y < maxFallDistance)
+        {
+            GameManager.health.DecreaseHealth();
+            GameManager.instance.playerGameObject.transform.position = spawnPoint.transform.position;
+            //gameObject.GetComponent<Health>().DecreaseHealth();
+        }
     }
     private void OnDrawGizmos()
     {
         if (showGroundCheck)
         {
-            Gizmos.DrawCube(groudPosition.position, new Vector3(rangeGroundCheck, rangeGroundCheck, rangeGroundCheck));
+            Gizmos.DrawCube(groudPosition.position, new Vector3(rangeGroundCheck, rangeGroundCheck, rangeGroundCheck));   
         }
     }
     public void StartIgnoreInput()
