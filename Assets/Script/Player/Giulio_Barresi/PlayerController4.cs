@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController4 : MonoBehaviour
 {
-    public float acceleration;
+    public float speed;
     private Animator playerAn;
 
     public float maxFallDistance = 0f;
@@ -48,7 +48,7 @@ public class PlayerController4 : MonoBehaviour
 
                 transform.rotation = Quaternion.LookRotation(direction);
 
-                rb.velocity = new Vector3(direction.x * acceleration * Time.fixedDeltaTime, rb.velocity.y, direction.z * acceleration * Time.fixedDeltaTime);
+                rb.velocity = new Vector3(direction.x * speed, rb.velocity.y, direction.z * speed);
   
                 /*if(rb.velocity.magnitude > maxVelocity)
                 {

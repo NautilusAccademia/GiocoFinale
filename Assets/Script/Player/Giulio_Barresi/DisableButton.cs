@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DisableTraps : InteractableObjects
+public class DisableButton : InteractableObjects
 {
-    [SerializeField] public GameObject BigStone;
+    [SerializeField] GameObject BigStone;
 
-    [SerializeField] Collider collider;
+    [SerializeField] GameObject colliderGO;
 
     private void Start()
     {
-        collider.enabled = true;
+        colliderGO.SetActive(false);
     }
 
     public override void Initialize()
@@ -20,15 +20,15 @@ public class DisableTraps : InteractableObjects
 
     public void SpawnBigStoneOnTrap()
     {
-        collider.enabled = false;
         BigStone.SetActive(true);
+        colliderGO.SetActive(true);
         InteractiveElement.instance.DestroyElement();
         HUD.instance.HideEarthHUD();
         HUD.instance.infoEImage.enabled = false;
     }
 
     public override void SpecificInteraction()
-    {     
+    {
         base.SpecificInteraction();
         SpawnBigStoneOnTrap();
     }

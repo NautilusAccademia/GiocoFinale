@@ -17,7 +17,7 @@ public class InteractBy : MonoBehaviour
     private AudioSource audioSource;
     [SerializeField] private AudioClip audioClip;
 
-    bool interacted;
+    public bool interacted;
 
     [SerializeField] bool repeatedMoreTimes;
 
