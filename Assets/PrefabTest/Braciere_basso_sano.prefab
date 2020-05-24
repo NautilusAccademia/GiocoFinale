@@ -4967,6 +4967,7 @@ GameObject:
   - component: {fileID: 967765115185281743}
   - component: {fileID: 250321385}
   - component: {fileID: 1049202430}
+  - component: {fileID: 1813700808427496347}
   m_Layer: 0
   m_Name: Braciere_basso_sano
   m_TagString: PresentBrazier
@@ -5001,7 +5002,7 @@ BoxCollider:
   m_GameObject: {fileID: 9101735440379205705}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.97060233, y: 0.6542228, z: 0.89811856}
   m_Center: {x: 0.15476996, y: 0.33661395, z: -0.17836526}
@@ -5047,6 +5048,19 @@ MonoBehaviour:
   objectsToActive:
   - {fileID: 0}
   objectsToDeactive: []
+--- !u!135 &1813700808427496347
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9101735440379205705}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.91568434
+  m_Center: {x: 0, y: 0.5398318, z: 0}
 --- !u!1001 &967765115874763229
 PrefabInstance:
   m_ObjectHideFlags: 0
