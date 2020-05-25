@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4669880267536489881}
   - component: {fileID: 4437657394277869487}
   - component: {fileID: 7973957976448473942}
-  - component: {fileID: 795271402144975310}
+  - component: {fileID: 9153437978503536219}
   m_Layer: 0
   m_Name: colonna_distrutta_2_presente
   m_TagString: Untagged
@@ -26,9 +26,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8544989325124218762}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.3051286, y: 0.7890537, z: -4.5894957}
-  m_LocalScale: {x: 0.013012, y: 0.013012, z: 0.013012}
+  m_LocalScale: {x: 0.024417229, y: 0.02441723, z: 0.024417229}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -80,16 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &795271402144975310
-BoxCollider:
+--- !u!64 &9153437978503536219
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8544989325124218762}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 59cc0acc6dd5529499980928c787129b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 133.52954, y: 95.19675, z: 110.63576}
-  m_Center: {x: 0, y: 0, z: 0}
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8145136920215169916, guid: 25364e72c068fc6438d886b090587d1a, type: 3}

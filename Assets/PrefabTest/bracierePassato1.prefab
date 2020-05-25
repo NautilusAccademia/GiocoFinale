@@ -4847,7 +4847,7 @@ Transform:
   m_GameObject: {fileID: 301085133437151143}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.5471191, y: 0.28599998, z: 9.865404}
-  m_LocalScale: {x: 1.55736, y: 1.55736, z: 1.55736}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children:
   - {fileID: 3515897903857692428}
   - {fileID: 8578308644796564383}
@@ -4863,7 +4863,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 301085133437151143}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 59cc0acc6dd5529499980928c787129b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.47840387
@@ -5023,6 +5023,7 @@ MonoBehaviour:
   interactableObjects:
   - {fileID: 1207470845}
   audioClip: {fileID: 8300000, guid: 7b06cb2217ef2dc4f90f0ecd1843712d, type: 3}
+  interacted: 0
   repeatedMoreTimes: 0
 --- !u!135 &6349956388481592442
 SphereCollider:
