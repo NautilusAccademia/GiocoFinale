@@ -1006,8 +1006,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 199.15651, y: 8.469772, z: 200.26752}
-  m_Center: {x: 0.012743475, y: 43.41793, z: 0.0017046931}
+  m_Size: {x: 199.15651, y: 5.276108, z: 200.26752}
+  m_Center: {x: 0.012743475, y: 41.8211, z: 0.0017046931}
 --- !u!1001 &293213178
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1953,6 +1953,42 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1a6c43d8a25ad64284fd8aa0343e7cc, type: 3}
+--- !u!1 &657718759 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7913833532049987277, guid: 35b19582323b1fe47a7a12d5372f590d,
+    type: 3}
+  m_PrefabInstance: {fileID: 968161160370613505}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &657718760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657718759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91996a05c6207984e8b8e32305cc86b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditions: []
+  interactableObjects:
+  - {fileID: 657718761}
+  audioClip: {fileID: 8300000, guid: 422c9c5a025888e438a86162235e42f9, type: 3}
+  interacted: 0
+  repeatedMoreTimes: 0
+--- !u!114 &657718761 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3870973097265707833, guid: 35b19582323b1fe47a7a12d5372f590d,
+    type: 3}
+  m_PrefabInstance: {fileID: 968161160370613505}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657718759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e33c60cbf65d4c4fb444088061cb869, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &681360080
 GameObject:
   m_ObjectHideFlags: 0
@@ -4386,6 +4422,18 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 1922086886}
+    - target: {fileID: 1164018002, guid: bec889760792b394580a366808b2af1b, type: 3}
+      propertyPath: m_Height
+      value: 0.09005983
+      objectReference: {fileID: 0}
+    - target: {fileID: 1164018002, guid: bec889760792b394580a366808b2af1b, type: 3}
+      propertyPath: m_Center.y
+      value: 0.04206146
+      objectReference: {fileID: 0}
+    - target: {fileID: 1164018002, guid: bec889760792b394580a366808b2af1b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1820399550, guid: bec889760792b394580a366808b2af1b, type: 3}
       propertyPath: healthHUD.Array.data[0]
       value: 
@@ -7608,12 +7656,17 @@ PrefabInstance:
     - target: {fileID: 1299291139381178291, guid: f3f16e3b470d77544b4fd7d8da10538f,
         type: 3}
       propertyPath: m_Center.z
-      value: 0.9230551
+      value: 0.9230552
       objectReference: {fileID: 0}
     - target: {fileID: 1299291139381178291, guid: f3f16e3b470d77544b4fd7d8da10538f,
         type: 3}
       propertyPath: m_Center.x
-      value: 0.19911303
+      value: -0.0053757187
+      objectReference: {fileID: 0}
+    - target: {fileID: 1299291139381178291, guid: f3f16e3b470d77544b4fd7d8da10538f,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.35912874
       objectReference: {fileID: 0}
     - target: {fileID: 6182834584028091310, guid: f3f16e3b470d77544b4fd7d8da10538f,
         type: 3}
