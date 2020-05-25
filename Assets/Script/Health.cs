@@ -46,6 +46,10 @@ public class Health : MonoBehaviour
             StartCoroutine(DamageGraphicEffect());
         }
 
+        if (health == 0)
+        {
+            GameManager.playerController4.StartIgnoreInput();
+        }
 
 
     }
