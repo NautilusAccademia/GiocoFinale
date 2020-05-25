@@ -5010,7 +5010,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: acb4d22515baf034e9ef779b86a25479,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.42
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: acb4d22515baf034e9ef779b86a25479,
         type: 3}
@@ -5062,6 +5062,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: acb4d22515baf034e9ef779b86a25479,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.025
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: acb4d22515baf034e9ef779b86a25479,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0101
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: acb4d22515baf034e9ef779b86a25479,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.012091
+      objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: acb4d22515baf034e9ef779b86a25479,
         type: 3}
       propertyPath: m_Name
@@ -5080,7 +5095,7 @@ PrefabInstance:
     - target: {fileID: 7561110372842451503, guid: acb4d22515baf034e9ef779b86a25479,
         type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: acb4d22515baf034e9ef779b86a25479,
         type: 3}
