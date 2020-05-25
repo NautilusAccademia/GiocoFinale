@@ -401,6 +401,7 @@ MonoBehaviour:
   interactableObjects:
   - {fileID: 1216255397}
   audioClip: {fileID: 8300000, guid: 7b06cb2217ef2dc4f90f0ecd1843712d, type: 3}
+  interacted: 0
   repeatedMoreTimes: 0
 --- !u!1 &4051310820920784617
 GameObject:
@@ -446,8 +447,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1460809, y: 1.7599604, z: 0.34676167}
-  m_Center: {x: 0.09246301, y: 0.62654185, z: -0.01626396}
+  m_Size: {x: 1.3005875, y: 1.7599604, z: 0.18356942}
+  m_Center: {x: 0.116075024, y: 0.62654185, z: -0.0175755}
 --- !u!114 &9060999250833540228
 MonoBehaviour:
   m_ObjectHideFlags: 0
