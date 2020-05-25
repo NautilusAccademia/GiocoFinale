@@ -44,6 +44,13 @@ public class Health : MonoBehaviour
             currentHealthIndex--;
 
             StartCoroutine(DamageGraphicEffect());
+
+        }
+
+        if (health == 0)
+        {
+
+            GameManager.playerController4.StartIgnoreInput();
         }
 
 
@@ -94,15 +101,15 @@ public class Health : MonoBehaviour
             }
         }
 
-        if (health <= 1)
+        if (health == 0)
         {
             playerAn.SetTrigger("Death");
 
-            if (health == 1)
-            {
+           
+            
                 yield return StartCoroutine(WaitASec(5)); //aspetta 5 secondi prima di far aprire la scena successiva.
                 SceneManager.LoadScene(4);
-            }
+            
 
 
         }
