@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3007730397798560111}
   - component: {fileID: 6117749094491507545}
   - component: {fileID: 565787828079409056}
+  - component: {fileID: 1316011941}
   m_Layer: 0
   m_Name: sasso3_definitivo
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2298739084375065468}
-  m_LocalRotation: {x: -0, y: 0.6882735, z: -0, w: 0.7254514}
+  m_LocalRotation: {x: 0, y: 0.68827236, z: 0, w: 0.7254524}
   m_LocalPosition: {x: 1.8441291, y: 0.15205383, z: -15.736496}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
@@ -58,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 111e7b48b6c156c40809fbe869577c9e, type: 2}
+  - {fileID: 2100000, guid: 09a71458590b2d74099e583b6752d197, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1316011941
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2298739084375065468}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 90.677795, y: 114.31275, z: 82.7338}
+  m_Center: {x: -0.19700246, y: 48.386017, z: -0.038806923}
