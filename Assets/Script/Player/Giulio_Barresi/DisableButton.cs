@@ -8,8 +8,11 @@ public class DisableButton : InteractableObjects
 
     [SerializeField] GameObject colliderGO;
 
+    [SerializeField] GameObject button;
+
     private void Start()
     {
+        button.SetActive(true);
         colliderGO.SetActive(false);
     }
 
@@ -22,6 +25,7 @@ public class DisableButton : InteractableObjects
     {
         BigStone.SetActive(true);
         colliderGO.SetActive(true);
+        button.SetActive(false);
         InteractiveElement.instance.DestroyElement();
         HUD.instance.HideEarthHUD();
         HUD.instance.infoEImage.enabled = false;

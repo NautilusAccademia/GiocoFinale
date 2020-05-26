@@ -398,6 +398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BigStone: {fileID: 528007414767794055}
   colliderGO: {fileID: 2502452374033128830}
+  colliderEinfo: {fileID: 0}
 --- !u!114 &2502452373625618004
 MonoBehaviour:
   m_ObjectHideFlags: 0
