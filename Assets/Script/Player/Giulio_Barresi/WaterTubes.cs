@@ -15,14 +15,14 @@ public class WaterTubes : MonoBehaviour
     bool buttonPressed;
 
     float numWater = 0f;
-    private Animator anim;
+ 
 
     void Start()
     {
         buttonPressed = false;
         skinnedMeshRenderer = water.GetComponent<SkinnedMeshRenderer>();
         skinnedMesh = water.GetComponent<SkinnedMeshRenderer>().sharedMesh;
-        anim = GetComponent<Animator>();
+      
     }
 
     private void OnTriggerEnter(Collider other)
@@ -32,7 +32,7 @@ public class WaterTubes : MonoBehaviour
             buttonPressed = true;
             waterParticle.Play(true);
             //skinnedMeshRenderer.GetBlendShapeWeight(25);// fa alzare livello acqua
-            anim.SetTrigger("Press");
+         
 
         for(int i = 0; i < 4; i++)
         {
