@@ -49,6 +49,7 @@ public class Health : MonoBehaviour
         if (health == 0)
         {
             GameManager.playerController4.StartIgnoreInput();
+            AudioManager.instance.PlayDeath();
         }
 
 

@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] AudioClip musicGameClip;
     [SerializeField] AudioClip collectibleClip;
+    [SerializeField] AudioClip deathClip;
 
     [SerializeField] AudioMixerSnapshot present;
     [SerializeField] AudioMixerSnapshot past;
@@ -29,6 +30,11 @@ public class AudioManager : MonoBehaviour
     public void PlayCollectible()
     {
         effect2DSource.PlayOneShot(collectibleClip);
+    }
+
+    public void PlayDeath()
+    {
+        effect2DSource.PlayOneShot(deathClip);
     }
 
 
