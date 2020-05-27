@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1379470385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1379470386}
+  m_Layer: 0
+  m_Name: LookAt
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1379470386
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1379470385}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.25, y: 0.555, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5252823396575694850}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &589039592074824452
 GameObject:
   m_ObjectHideFlags: 0
@@ -4958,6 +4988,7 @@ Transform:
   - {fileID: 3455498867274690838}
   - {fileID: 981630523312920457}
   - {fileID: 981630523637518758}
+  - {fileID: 1379470386}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -45.000004, z: 0}
@@ -5085,6 +5116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 0}
   pos: {fileID: 0}
+  lookAt: {fileID: 0}
 --- !u!114 &1706796930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5101,4 +5133,5 @@ MonoBehaviour:
   interactableObjects:
   - {fileID: 981630523025626429}
   audioClip: {fileID: 8300000, guid: fd84c4665dbf05c4ea0ce1afd63d20eb, type: 3}
+  interacted: 0
   repeatedMoreTimes: 1

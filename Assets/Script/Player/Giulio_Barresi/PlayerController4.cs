@@ -10,7 +10,8 @@ public class PlayerController4 : MonoBehaviour
     public float maxFallDistance = 0f;
 
     public Transform tr;
-    public Transform spawnPoint;
+    public Transform spawnPointPresent;
+    public Transform spawnPointPast;
 
     public bool ignoreInput = false;
 
@@ -27,7 +28,8 @@ public class PlayerController4 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxFallDistance = spawnPoint.position.y - 5f;
+        maxFallDistance = spawnPointPresent.position.y - 5f;
+        maxFallDistance = spawnPointPast.position.y - 5f;
         rb = GetComponent<Rigidbody>();
         playerAn = GetComponent<Animator>(); //aggiunta elisa
     }
@@ -101,11 +103,15 @@ public class PlayerController4 : MonoBehaviour
             transform.parent = null;
         }
 
-        if(tr.position.y < maxFallDistance)
+        if(tr.position.y < maxFallDistance && GameManager.instance.YouAreInThePresent == true)
         {
             GameManager.health.DecreaseHealth();
-            GameManager.instance.playerGameObject.transform.position = spawnPoint.transform.position;
+            GameManager.instance.playerGameObject.transform.position = spawnPointPresent.transform.position;
             //gameObject.GetComponent<Health>().DecreaseHealth();
+        }
+        if(tr.position.y < maxFallDistance && GameManager.instance.YouAreInThePresent == false)
+        {
+            GameManager.instance.playerGameObject.transform.position = spawnPointPast.transform.position;
         }
     }
     private void OnDrawGizmos()

@@ -12,7 +12,7 @@ GameObject:
   m_Layer: 0
   m_Name: LookAt
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450887825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.85, y: 0.859, z: 0.178}
+  m_LocalPosition: {x: 6.187, y: 0.753, z: 0.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2276365839705351115}
@@ -193,6 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transition: {fileID: 0}
   pos: {fileID: 0}
+  lookAt: {fileID: 0}
 --- !u!114 &8296172668641489137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +210,7 @@ MonoBehaviour:
   interactableObjects:
   - {fileID: 6552159550637060205}
   audioClip: {fileID: 8300000, guid: fd84c4665dbf05c4ea0ce1afd63d20eb, type: 3}
+  interacted: 0
   repeatedMoreTimes: 1
 --- !u!114 &8296172668641489138
 MonoBehaviour:
@@ -5001,7 +5003,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6552159550179273375}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.55, y: 0.753, z: 0}
+  m_LocalPosition: {x: 4.15, y: 0.753, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2276365839705351115}

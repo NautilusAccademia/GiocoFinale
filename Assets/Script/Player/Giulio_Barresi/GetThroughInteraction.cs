@@ -8,6 +8,9 @@ public class GetThroughInteraction : InteractableObjects
     [SerializeField] Animator transition; //Animator that takes in reference the Canvas for the transition
 
     [SerializeField] Transform pos;
+
+    [SerializeField] Transform lookAt;
+
     public override void SpecificInteraction()
     {
         base.SpecificInteraction();
@@ -20,6 +23,7 @@ public class GetThroughInteraction : InteractableObjects
     {
         StartCoroutine(TransitionSet());//Added by Nanni, starts a couroutine which contains the animation
         GameManager.instance.playerGameObject.transform.position = pos.transform.position;
+        GameManager.instance.playerGameObject.transform.LookAt(lookAt);
     }
 
     private IEnumerator TransitionSet() //IEnumerator which sets the animation
