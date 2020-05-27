@@ -152,6 +152,7 @@ GameObject:
   - component: {fileID: 981630523025626430}
   - component: {fileID: 981630523025626429}
   - component: {fileID: 1706796930}
+  - component: {fileID: 5286652678901446430}
   m_Layer: 0
   m_Name: Portale_Passato
   m_TagString: PastPortal
@@ -319,3 +320,15 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: fd84c4665dbf05c4ea0ce1afd63d20eb, type: 3}
   interacted: 0
   repeatedMoreTimes: 1
+--- !u!114 &5286652678901446430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9132911729927758353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3de15886659ab640a97fb3d810a6633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

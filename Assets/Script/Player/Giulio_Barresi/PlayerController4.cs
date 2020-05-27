@@ -107,10 +107,10 @@ public class PlayerController4 : MonoBehaviour
         {
             GameManager.health.DecreaseHealth();
             GameManager.instance.playerGameObject.transform.position = spawnPointPresent.transform.position;
-            //gameObject.GetComponent<Health>().DecreaseHealth();
         }
         if(tr.position.y < maxFallDistance && GameManager.instance.YouAreInThePresent == false)
         {
+            GameManager.health.DecreaseHealth();
             GameManager.instance.playerGameObject.transform.position = spawnPointPast.transform.position;
         }
     }

@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject playerGameObject;
 
+    public GameObject FakePlayer;
+
     [SerializeField] public GameObject playerCamera;
 
     public static Rigidbody playerRb;
@@ -70,6 +72,13 @@ public class GameManager : MonoBehaviour
             {
                 interactBy.Interact();
             }            
+        }
+
+        if(health.health == 0)
+        {
+            playerController4.gameObject.SetActive(false);
+            FakePlayer.SetActive(true);
+            FakePlayer.transform.position = playerController4.gameObject.transform.position;
         }
     }
 }

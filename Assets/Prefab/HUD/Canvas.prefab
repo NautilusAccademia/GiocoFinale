@@ -1280,6 +1280,7 @@ GameObject:
   - component: {fileID: 1217182727922193359}
   - component: {fileID: 6140945512157199373}
   - component: {fileID: 3478771556864032298}
+  - component: {fileID: 4910042294209260437}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1429,6 +1430,25 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
+--- !u!95 &4910042294209260437
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1217182727922193396}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 54b0cb51ce5d7aa4e9b569d455d1e319, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1333774510930435385
 GameObject:
   m_ObjectHideFlags: 0
