@@ -13,7 +13,11 @@ public class ContinueButton : MonoBehaviour
         sceneToContinue = PlayerPrefs.GetInt("SavedScene");
 
         if (sceneToContinue != 0)
+        {
             SceneManager.LoadScene(sceneToContinue);
+            Time.timeScale = 1f; //(Nanni) Whenever the start game button is pressed
+                                 //The time begins to flow again instead of staying stopped
+        }
 
         else
             return;
