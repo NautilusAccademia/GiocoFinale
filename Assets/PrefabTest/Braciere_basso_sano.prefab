@@ -24081,6 +24081,7 @@ GameObject:
   - component: {fileID: 6978062300724641377}
   - component: {fileID: 1557126983946659820}
   - component: {fileID: 2989670014532884279}
+  - component: {fileID: 2922965760748979350}
   m_Layer: 0
   m_Name: Braciere_basso_sano
   m_TagString: PresentBrazier
@@ -24351,3 +24352,15 @@ CapsuleCollider:
   m_Height: 94.99551
   m_Direction: 1
   m_Center: {x: -2.8586655, y: 47.784466, z: 0.027030945}
+--- !u!114 &2922965760748979350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9101735440379205705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c458a50c521095740bd26956138b59b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

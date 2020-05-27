@@ -552,6 +552,7 @@ GameObject:
   - component: {fileID: 1747599488415573481}
   - component: {fileID: 1747599488415573482}
   - component: {fileID: 1747599488415573485}
+  - component: {fileID: 194055072318449067}
   m_Layer: 0
   m_Name: Copia di Pulsante_Pavimento
   m_TagString: Untagged
@@ -768,3 +769,16 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: 7b06cb2217ef2dc4f90f0ecd1843712d, type: 3}
   interacted: 0
   repeatedMoreTimes: 0
+--- !u!114 &194055072318449067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737559574076475054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cbb32c3ba321644f8ba798d729abce4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EarthIsActive: {fileID: 4443114012537924670}

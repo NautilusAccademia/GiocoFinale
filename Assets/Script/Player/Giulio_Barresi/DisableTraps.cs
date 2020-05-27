@@ -25,6 +25,7 @@ public class DisableTraps : InteractableObjects
         InteractiveElement.instance.DestroyElement();
         HUD.instance.HideEarthHUD();
         HUD.instance.infoEImage.enabled = false;
+        HUD.instance.infoEarthEimage.enabled = false;
     }
 
     public override void SpecificInteraction()

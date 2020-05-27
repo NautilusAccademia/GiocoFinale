@@ -17,7 +17,8 @@ public class FireOnBrazier : InteractableObjects
     {
         Fire.SetActive(true);
         InteractiveElement.instance.DestroyElement();
-        HUD.instance.HideFireHUD();   
+        HUD.instance.HideFireHUD();
+        HUD.instance.infoFireEimage.enabled = false;
     }
 
     public override void SpecificInteraction()

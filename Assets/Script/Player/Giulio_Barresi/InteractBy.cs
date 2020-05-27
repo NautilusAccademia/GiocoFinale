@@ -72,15 +72,15 @@ public class InteractBy : MonoBehaviour
         {
             GameManager.instance.interactByList.Add(this);
         }
-        if (other.CompareTag("Player"))
+        /*if (other.CompareTag("Player"))
         {
             HUD.instance.infoEImage.enabled = true;
-        }
+        }*/
     }
 
     protected void OnTriggerExit(Collider other)
     {
         GameManager.instance.interactByList.Remove(this);
-        HUD.instance.infoEImage.enabled = false;
+        //HUD.instance.infoEImage.enabled = false;
     }
 }

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1481373663848743302}
   - component: {fileID: 8630728884691530867}
   - component: {fileID: 931481428949358020}
+  - component: {fileID: 203768139309660729}
   m_Layer: 0
   m_Name: FAlo_teschi_definitivo
   m_TagString: Untagged
@@ -109,3 +110,15 @@ CapsuleCollider:
   m_Height: 1.4200003
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0.28}
+--- !u!114 &203768139309660729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914850243604968794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3de15886659ab640a97fb3d810a6633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

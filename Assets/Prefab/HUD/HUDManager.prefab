@@ -50,3 +50,7 @@ MonoBehaviour:
   ElementHUDEmpty: {fileID: 0}
   infoEImage: {fileID: 0}
   infoZImage: {fileID: 0}
+  infoFireEimage: {fileID: 0}
+  infoWaterEimage: {fileID: 0}
+  infoAirEimage: {fileID: 0}
+  infoEarthEimage: {fileID: 0}

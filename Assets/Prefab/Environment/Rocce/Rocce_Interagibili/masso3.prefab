@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7634710273201338708}
   - component: {fileID: 2765951569414006723}
   - component: {fileID: 5339773394854800793}
+  - component: {fileID: 3184174387867744513}
   m_Layer: 0
   m_Name: masso3
   m_TagString: Untagged
@@ -226,6 +227,7 @@ MonoBehaviour:
   interactableObjects:
   - {fileID: 7634710273201338708}
   audioClip: {fileID: 8300000, guid: 422c9c5a025888e438a86162235e42f9, type: 3}
+  interacted: 0
   repeatedMoreTimes: 0
 --- !u!114 &7634710273201338708
 MonoBehaviour:
@@ -267,6 +269,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 90.84638, y: 87.58594, z: 67.673935}
   m_Center: {x: -0.0000038850017, y: -10.65603, z: 2.3420753}
+--- !u!114 &3184174387867744513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1932639751415870939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3de15886659ab640a97fb3d810a6633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &537600221915616139
 PrefabInstance:
   m_ObjectHideFlags: 0
