@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3870973097265707834}
   - component: {fileID: 3870973097265707832}
   - component: {fileID: 3870973097265707833}
+  - component: {fileID: 1348164818856248807}
   m_Layer: 0
   m_Name: AirWall
   m_TagString: Untagged
@@ -4893,7 +4894,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e33c60cbf65d4c4fb444088061cb869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 422c9c5a025888e438a86162235e42f9, type: 3}
-  repeatedMoreTimes: 1
-  condition: {fileID: 3870973097265707832}
   elementToTake: 3
+--- !u!114 &1348164818856248807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7913833532049987277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3de15886659ab640a97fb3d810a6633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

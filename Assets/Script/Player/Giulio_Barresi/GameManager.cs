@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class GameManager : MonoBehaviour
     public static PlayerController4 playerController4;
 
     public GameObject playerGameObject;
+
+    public GameObject FakePlayer;
 
     [SerializeField] public GameObject playerCamera;
 
@@ -55,11 +58,6 @@ public class GameManager : MonoBehaviour
         damage = FindObjectOfType<Damage>();
 
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -70,6 +68,31 @@ public class GameManager : MonoBehaviour
             {
                 interactBy.Interact();
             }            
+        }
+
+        if(health.health == 0)
+        {
+            playerController4.gameObject.SetActive(false);
+            FakePlayer.SetActive(true);
+            FakePlayer.transform.position = playerController4.gameObject.transform.position;
+        }
+
+        StartCoroutine((PlayerDeath()));
+    }
+    public IEnumerator WaitASec(float timeToWait)
+    {
+        yield return new WaitForSeconds(timeToWait); // serve per creare il tempo giusto prima di far partire la scena della morte con una quantità di tempo
+    }
+
+    IEnumerator PlayerDeath()
+    {
+        if (health.health == 0)
+        {
+            playerController4.gameObject.SetActive(false);
+            FakePlayer.SetActive(true);
+            FakePlayer.transform.position = playerController4.gameObject.transform.position;
+            yield return StartCoroutine(WaitASec(3));
+            SceneManager.LoadScene(4);
         }
     }
 }

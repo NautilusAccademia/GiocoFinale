@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 6552159550637060205}
   - component: {fileID: 8296172668641489137}
   - component: {fileID: 8296172668641489138}
+  - component: {fileID: 5439209904172390661}
   m_Layer: 0
   m_Name: Portale_presente
   m_TagString: PresentPortal
@@ -224,6 +225,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   elementofCondition: 1
+--- !u!114 &5439209904172390661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3011816830826074584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3de15886659ab640a97fb3d810a6633, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6552159550179273375
 GameObject:
   m_ObjectHideFlags: 0
