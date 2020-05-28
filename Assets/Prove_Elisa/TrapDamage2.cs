@@ -10,6 +10,8 @@ public class TrapDamage2 : MonoBehaviour
 
     [SerializeField] Collider collider;
 
+    AudioNonInteractiveObject trapAudio;
+
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,8 @@ public class TrapDamage2 : MonoBehaviour
         stoneToDeactive.SetActive(false);
         collider.enabled = true;
         Damage.instance.enabled = true;
+
+        trapAudio = GetComponent<AudioNonInteractiveObject>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -32,6 +36,8 @@ public class TrapDamage2 : MonoBehaviour
           
 
             other.gameObject.GetComponent<Health>().DecreaseHealth();
+
+            trapAudio.PlayAudioClip();
 
         }
     }
