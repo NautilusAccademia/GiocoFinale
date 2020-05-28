@@ -1684,7 +1684,7 @@ Transform:
   - {fileID: 327235576}
   - {fileID: 127890102}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &205588735
 GameObject:
@@ -3002,12 +3002,6 @@ Transform:
   m_Father: {fileID: 771438110}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!137 &312069893 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 8130751602831420897, guid: bec889760792b394580a366808b2af1b,
-    type: 3}
-  m_PrefabInstance: {fileID: 752381908}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &313567195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13668,7 +13662,13 @@ PrefabInstance:
       propertyPath: lookAt
       value: 
       objectReference: {fileID: 1365770962}
-    m_RemovedComponents: []
+    - target: {fileID: 8296172668641489138, guid: 5945c90cf88f8704398bb2cf5589f9c0,
+        type: 3}
+      propertyPath: elementofCondition
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8296172668641489138, guid: 5945c90cf88f8704398bb2cf5589f9c0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5945c90cf88f8704398bb2cf5589f9c0, type: 3}
 --- !u!1001 &1259337160
 PrefabInstance:
@@ -46021,7 +46021,7 @@ PrefabInstance:
         type: 3}
       propertyPath: meshRenderer
       value: 
-      objectReference: {fileID: 312069893}
+      objectReference: {fileID: 0}
     - target: {fileID: 5069775223298801560, guid: a7f29b46602df1c4d916724fea713972,
         type: 3}
       propertyPath: m_Name

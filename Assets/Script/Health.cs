@@ -135,11 +135,18 @@ public class Health : MonoBehaviour
         //meshRenderer = GetComponent<MeshRenderer>(); // Inizializiamo il meshRenderer
         blinkTime = invincibilityTime / nBlink; // Calcola il tempo di un blik basandosi sul tempo in cui resti invicibile e il numero di blink che vogliamo moastare
         playerAn = GetComponent<Animator>();
+        currentHealthIndex= PlayerPrefs.GetInt("health");
     }
 
     private void Update()
     {
+        SaveHealth();
         currentTime += Time.deltaTime; // Incrementa il timer ogni frame del tempo trascorso nel frame, quindi semplicemente il tempo trascorso
+    }
+
+    void SaveHealth()
+    {
+        PlayerPrefs.SetInt("health", currentHealthIndex);
     }
 
 }
