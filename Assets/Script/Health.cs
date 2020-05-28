@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    public  int health;
+    public int health;
 
     [SerializeField] GameObject[] healthHUD;
 
@@ -35,6 +35,8 @@ public class Health : MonoBehaviour
         {
             currentTime = 0;
 
+           
+           
 
             health--;
 
@@ -44,6 +46,11 @@ public class Health : MonoBehaviour
             StartCoroutine(DamageGraphicEffect());
         }
 
+        if (health == 0)
+        {                 
+            GameManager.playerController4.StartIgnoreInput();
+            
+        }
 
 
     }
@@ -128,20 +135,11 @@ public class Health : MonoBehaviour
         //meshRenderer = GetComponent<MeshRenderer>(); // Inizializiamo il meshRenderer
         blinkTime = invincibilityTime / nBlink; // Calcola il tempo di un blik basandosi sul tempo in cui resti invicibile e il numero di blink che vogliamo moastare
         playerAn = GetComponent<Animator>();
-        
     }
 
     private void Update()
     {
         currentTime += Time.deltaTime; // Incrementa il timer ogni frame del tempo trascorso nel frame, quindi semplicemente il tempo trascorso
-
-      
-       
-        if (health == 0)
-        {
-            GameManager.playerController4.StartIgnoreInput();
-            AudioManager.instance.PlayDeath();
-        }
     }
 
 }

@@ -34,7 +34,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlayDeath()
     {
-        effect2DSource.PlayOneShot(deathClip);
+        effect2DSource.PlayOneShot(deathClip, 0.7f);
     }
 
 

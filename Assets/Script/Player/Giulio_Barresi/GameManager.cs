@@ -34,6 +34,8 @@ public class GameManager : MonoBehaviour
 
     public static int[] ElementInHand = new int [4];
 
+    private bool playOnce = false;
+
     public enum Elements
     {
         None, Fire, Water, Air, Earth
@@ -86,8 +88,10 @@ public class GameManager : MonoBehaviour
 
     IEnumerator PlayerDeath()
     {
-        if (health.health == 0)
+        if (health.health == 0 && !playOnce)
         {
+            playOnce = true;
+            AudioManager.instance.PlayDeath();
             playerController4.gameObject.SetActive(false);
             FakePlayer.SetActive(true);
             FakePlayer.transform.position = playerController4.gameObject.transform.position;

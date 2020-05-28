@@ -8105,6 +8105,11 @@ PrefabInstance:
       propertyPath: interactableObjects.Array.data[0]
       value: 
       objectReference: {fileID: 684436987}
+    - target: {fileID: 1329692028622766671, guid: fb2348b892f0492429564a47aabb3793,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.059
+      objectReference: {fileID: 0}
     - target: {fileID: 2053185546474364570, guid: fb2348b892f0492429564a47aabb3793,
         type: 3}
       propertyPath: m_Name
@@ -21453,6 +21458,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1480382760}
     m_Modifications:
+    - target: {fileID: 1553722341, guid: fb2348b892f0492429564a47aabb3793, type: 3}
+      propertyPath: audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 890b553c2293d3f4ea6296dcde5aead6, type: 3}
+    - target: {fileID: 1553722342, guid: fb2348b892f0492429564a47aabb3793, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1329692028622766671, guid: fb2348b892f0492429564a47aabb3793,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0645
+      objectReference: {fileID: 0}
     - target: {fileID: 2053185546474364570, guid: fb2348b892f0492429564a47aabb3793,
         type: 3}
       propertyPath: m_Name
