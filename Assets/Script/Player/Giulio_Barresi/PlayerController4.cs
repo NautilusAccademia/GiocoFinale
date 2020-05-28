@@ -103,15 +103,22 @@ public class PlayerController4 : MonoBehaviour
             transform.parent = null;
         }
 
-        if(tr.position.y < maxFallDistance && GameManager.instance.YouAreInThePresent == true)
+        if(tr.position.y < maxFallDistance && GameManager.instance.YouAreInThePresent == true && GameManager.health.health > 0)
         {
             GameManager.health.DecreaseHealth();
             GameManager.instance.playerGameObject.transform.position = spawnPointPresent.transform.position;
         }
-        if(tr.position.y < maxFallDistance && GameManager.instance.YouAreInThePresent == false)
+        if(tr.position.y < maxFallDistance && GameManager.instance.YouAreInThePresent == false && GameManager.health.health > 0)
         {
             GameManager.health.DecreaseHealth();
             GameManager.instance.playerGameObject.transform.position = spawnPointPast.transform.position;
+        }
+        if(GameManager.health.health == 1)
+        {
+            spawnPointPresent = null;
+            spawnPointPast = null;
+            //Destroy(spawnPointPast.gameObject);
+            //Destroy(spawnPointPresent.gameObject);
         }
     }
     private void OnDrawGizmos()

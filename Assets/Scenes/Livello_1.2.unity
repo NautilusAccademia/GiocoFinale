@@ -1722,6 +1722,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1313848711, guid: c89c1a61da6948946993b3d5cf7d5141, type: 3}
+      propertyPath: meshRenderer
+      value: 
+      objectReference: {fileID: 217817657}
     - target: {fileID: 2089146925138278252, guid: c89c1a61da6948946993b3d5cf7d5141,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1781,11 +1785,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FakePlayer
-      objectReference: {fileID: 0}
-    - target: {fileID: 3073000686005355903, guid: c89c1a61da6948946993b3d5cf7d5141,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c89c1a61da6948946993b3d5cf7d5141, type: 3}
@@ -13906,24 +13905,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 215185058}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1313848711
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313848705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d732cf21a189c64fbc816ca25dad08c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  healthHUD: []
-  invincibilityTime: 0
-  nBlink: 3
-  meshRenderer: {fileID: 217817657}
-  colorEnd: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &1322207878
 PrefabInstance:
   m_ObjectHideFlags: 0
