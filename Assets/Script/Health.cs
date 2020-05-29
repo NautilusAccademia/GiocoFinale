@@ -145,7 +145,7 @@ public class Health : MonoBehaviour
 
     private void Update()
     {
-        SaveHealth();
+       
         currentTime += Time.deltaTime; // Incrementa il timer ogni frame del tempo trascorso nel frame, quindi semplicemente il tempo trascorso
     }
 
@@ -159,10 +159,6 @@ public class Health : MonoBehaviour
 
         }
     }
-    void SaveHealth()
-    {
-        PlayerPrefs.SetInt("health", health);
-
-    }
+   
 }
 

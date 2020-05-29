@@ -12,23 +12,7 @@ public class ContinueButton : MonoBehaviour
 
     private bool needtoLoad = false;
 
-   /* void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-
-        }
-        else if (instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-
-        gameObject.transform.parent = null;
-
-        DontDestroyOnLoad(gameObject);
-
-    }*/
+  
 
     public void ContinueGame()
     {
@@ -41,6 +25,7 @@ public class ContinueButton : MonoBehaviour
             SceneManager.LoadScene(sceneToContinue);
             Time.timeScale = 1f; //(Nanni) Whenever the start game button is pressed
                                  //The time begins to flow again instead of staying stopped
+            LoadManager.instance.SetneedtoLoad();
 
         }
 
@@ -48,19 +33,6 @@ public class ContinueButton : MonoBehaviour
             return;
     }
 
-   /* void Update()
-    {
-        if (needtoLoad && nextScenetoLoad == SceneManager.GetActiveScene().buildIndex)
-
-        {
-            GameManager.health.health = PlayerPrefs.GetInt("health");
-            needtoLoad = false;
-            nextScenetoLoad = SceneManager.GetActiveScene().buildIndex + 1;
-            Debug.Log("Grazie Gesu");
-            GameManager.health.UpdateHUD();
-
-
-        }
-    }*/
+   
 
 }
