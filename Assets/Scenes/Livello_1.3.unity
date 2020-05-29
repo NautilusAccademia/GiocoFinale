@@ -556,7 +556,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ced325c0207d74aab853e69aaa7cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water: {fileID: 0}
+  waterAn: {fileID: 0}
+  collider: []
+--- !u!95 &27305511
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 27305505}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c2647abc25c14e4a853f7bd8cccd288, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &30000943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21990,8 +22010,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1499193210}
   - component: {fileID: 1499193211}
-  - component: {fileID: 1499193213}
   - component: {fileID: 1499193212}
+  - component: {fileID: 1499193213}
   m_Layer: 0
   m_Name: TheCollider
   m_TagString: Untagged
@@ -22048,10 +22068,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1499193209}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48ced325c0207d74aab853e69aaa7cb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 27753d4148039ca40a58c7e92c7bacb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water: {fileID: 27305505}
+  waterAn: {fileID: 27305511}
+  collider:
+  - {fileID: 2050062946}
+  - {fileID: 1499193211}
+  - {fileID: 1448153307}
+  - {fileID: 1247969461}
 --- !u!1001 &1509020580
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23191,7 +23216,7 @@ PrefabInstance:
     - target: {fileID: 7561110372842451503, guid: acb4d22515baf034e9ef779b86a25479,
         type: 3}
       propertyPath: m_BlendShapeWeights.Array.data[0]
-      value: 0
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 7561110372842451503, guid: acb4d22515baf034e9ef779b86a25479,
         type: 3}
@@ -23522,8 +23547,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1587383549}
   - component: {fileID: 1587383552}
-  - component: {fileID: 1587383551}
   - component: {fileID: 1587383550}
+  - component: {fileID: 1587383551}
   m_Layer: 0
   m_Name: TheCollider
   m_TagString: Untagged
@@ -23567,10 +23592,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1587383548}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48ced325c0207d74aab853e69aaa7cb0, type: 3}
+  m_Script: {fileID: 11500000, guid: 465b15bdcd2724b409f29c069e567a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water: {fileID: 27305505}
+  waterAn: {fileID: 27305511}
+  collider:
+  - {fileID: 2050062946}
+  - {fileID: 1499193211}
+  - {fileID: 1448153307}
+  - {fileID: 1247969461}
 --- !u!65 &1587383552
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26386,8 +26416,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1759776482}
   - component: {fileID: 1759776483}
-  - component: {fileID: 1759776485}
   - component: {fileID: 1759776484}
+  - component: {fileID: 1759776485}
   m_Layer: 0
   m_Name: TheCollider
   m_TagString: Untagged
@@ -26444,10 +26474,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1759776481}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48ced325c0207d74aab853e69aaa7cb0, type: 3}
+  m_Script: {fileID: 11500000, guid: f0d50c8351629de49b351c37bd45ebf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water: {fileID: 27305505}
+  waterAn: {fileID: 0}
+  collider:
+  - {fileID: 2050062946}
+  - {fileID: 1499193211}
+  - {fileID: 1448153307}
+  - {fileID: 1247969461}
 --- !u!1001 &1761949084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26856,7 +26891,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ced325c0207d74aab853e69aaa7cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water: {fileID: 27305505}
+  waterAn: {fileID: 0}
+  collider: []
 --- !u!1001 &1777461142
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31642,7 +31678,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48ced325c0207d74aab853e69aaa7cb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  water: {fileID: 27305505}
+  waterAn: {fileID: 27305511}
+  collider:
+  - {fileID: 2050062946}
+  - {fileID: 1499193211}
+  - {fileID: 1448153307}
+  - {fileID: 1247969461}
 --- !u!65 &2050062946
 BoxCollider:
   m_ObjectHideFlags: 0

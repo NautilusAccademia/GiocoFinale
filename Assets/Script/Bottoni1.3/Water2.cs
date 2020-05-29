@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterTubes : MonoBehaviour
+public class Water2 : MonoBehaviour
 {
     //[SerializeField] Conditions condition;
 
@@ -11,7 +11,7 @@ public class WaterTubes : MonoBehaviour
     //SkinnedMeshRenderer skinnedMeshRenderer;
     //Mesh skinnedMesh;
     [SerializeField] Collider[] collider;
-   
+
 
     void Start()
     {
@@ -26,15 +26,15 @@ public class WaterTubes : MonoBehaviour
 
     }
 
-   void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Air"))
         {
-            waterAn.SetTrigger("one");
-            collider[1].enabled = true;
-            collider[0].enabled = false;
+            waterAn.SetTrigger("two");
+            collider[2].enabled = true;
+            collider[1].enabled = false;
         }
 
-       
+
     }
 }
