@@ -22,22 +22,43 @@ public class Health : MonoBehaviour
 
     private Animator playerAn;
 
+
+
     private void Awake()
     {
-        health = healthHUD.Length;
+        
+       
         currentHealthIndex = healthHUD.Length - 1;
         currentTime = invincibilityTime;
+
+        if (health<= 0)
+        {
+            health = 1;
+
+        }
+
+        for(int i = 2; i>= health; i--)
+        {
+            healthHUD[currentHealthIndex].SetActive(false);
+            currentHealthIndex--;
+
+            
+        }
+      
+        
     }
 
     public void DecreaseHealth()
     {
+        if (health <= 0)
+        {
+            return;
+        }
         if (currentTime > invincibilityTime)
         {
             currentTime = 0;
 
-           
-           
-
+         
             health--;
 
             healthHUD[currentHealthIndex].SetActive(false);
@@ -46,19 +67,14 @@ public class Health : MonoBehaviour
             StartCoroutine(DamageGraphicEffect());
         }
 
-        if (health == 0)
-        {                 
-            GameManager.playerController4.StartIgnoreInput();
-            
-        }
 
 
     }
-  
-       public IEnumerator WaitASec(float timeToWait)
-      {
-          yield return new WaitForSeconds(timeToWait); // serve per creare il tempo giusto prima di far partire la scena della morte con una quantità di tempo
-      }
+
+    public IEnumerator WaitASec(float timeToWait)
+    {
+        yield return new WaitForSeconds(timeToWait); // serve per creare il tempo giusto prima di far partire la scena della morte con una quantità di tempo
+    }
 
     IEnumerator DamageGraphicEffect()
     {
@@ -99,20 +115,7 @@ public class Health : MonoBehaviour
             }
         }
 
-        if (health <= 0)
-        {
-            playerAn.SetTrigger("Death");
-            GameManager.playerController4.StartIgnoreInput(); //ignora l'input del giocatore
-            yield return StartCoroutine(WaitASec(2)); //aspetta 5 secondi prima di far aprire la scena successiva.
-            SceneManager.LoadScene(4);
 
-            /*if (health == 0)
-            {
-                
-            }*/
-
-
-        }
     }
 
     public void IncreaseHealth()
@@ -135,7 +138,9 @@ public class Health : MonoBehaviour
         //meshRenderer = GetComponent<MeshRenderer>(); // Inizializiamo il meshRenderer
         blinkTime = invincibilityTime / nBlink; // Calcola il tempo di un blik basandosi sul tempo in cui resti invicibile e il numero di blink che vogliamo moastare
         playerAn = GetComponent<Animator>();
-        currentHealthIndex= PlayerPrefs.GetInt("health");
+      
+      
+        
     }
 
     private void Update()
@@ -144,9 +149,20 @@ public class Health : MonoBehaviour
         currentTime += Time.deltaTime; // Incrementa il timer ogni frame del tempo trascorso nel frame, quindi semplicemente il tempo trascorso
     }
 
-    void SaveHealth()
+    public void UpdateHUD()
     {
-        PlayerPrefs.SetInt("health", currentHealthIndex);
-    }
+        for (int i = 2; i >= health; i--)
+        {
+            healthHUD[currentHealthIndex].SetActive(false);
+            currentHealthIndex--;
 
+
+        }
+    }
+   void SaveHealth()
+    {
+        PlayerPrefs.SetInt("health", health);
+        
+    }
 }
+    

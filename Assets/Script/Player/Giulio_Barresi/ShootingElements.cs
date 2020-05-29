@@ -22,7 +22,7 @@ public class ShootingElements : MonoBehaviour
 
     void ShootingAir()
     {
-        if (Input.GetKeyDown(KeyCode.F) && condition.CheckCondition())
+        if (Input.GetKeyDown(KeyCode.E) && condition.CheckCondition())
         {
             airGun.SetActive(true);
             air.Play(true);
