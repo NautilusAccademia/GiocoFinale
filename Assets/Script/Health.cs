@@ -26,26 +26,26 @@ public class Health : MonoBehaviour
 
     private void Awake()
     {
-        
-       
+
+
         currentHealthIndex = healthHUD.Length - 1;
         currentTime = invincibilityTime;
 
-        if (health<= 0)
+        if (health <= 0)
         {
             health = 1;
 
         }
 
-        for(int i = 2; i>= health; i--)
+        for (int i = 2; i >= health; i--)
         {
             healthHUD[currentHealthIndex].SetActive(false);
             currentHealthIndex--;
 
-            
+
         }
-      
-        
+
+
     }
 
     public void DecreaseHealth()
@@ -58,7 +58,7 @@ public class Health : MonoBehaviour
         {
             currentTime = 0;
 
-         
+
             health--;
 
             healthHUD[currentHealthIndex].SetActive(false);
@@ -138,9 +138,9 @@ public class Health : MonoBehaviour
         //meshRenderer = GetComponent<MeshRenderer>(); // Inizializiamo il meshRenderer
         blinkTime = invincibilityTime / nBlink; // Calcola il tempo di un blik basandosi sul tempo in cui resti invicibile e il numero di blink che vogliamo moastare
         playerAn = GetComponent<Animator>();
-      
-      
-        
+
+
+
     }
 
     private void Update()
@@ -159,10 +159,10 @@ public class Health : MonoBehaviour
 
         }
     }
-   void SaveHealth()
+    void SaveHealth()
     {
         PlayerPrefs.SetInt("health", health);
-        
+
     }
 }
-    
+

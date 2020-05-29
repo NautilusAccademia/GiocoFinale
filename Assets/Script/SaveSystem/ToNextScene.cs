@@ -13,12 +13,12 @@ public class ToNextScene : MonoBehaviour
 
     void Awake()
     {
-      if(instance == null)
+        if (instance == null)
         {
             instance = this;
 
         }
-      else if (instance != this)
+        else if (instance != this)
         {
             Destroy(this.gameObject);
         }
@@ -33,7 +33,7 @@ public class ToNextScene : MonoBehaviour
     private void Start()
     {
         Debug.Log(needtoLoad);
-        
+
         nextScenetoLoad = SceneManager.GetActiveScene().buildIndex + 1;
 
 
@@ -47,14 +47,14 @@ public class ToNextScene : MonoBehaviour
 
         SceneManager.LoadScene(nextScenetoLoad);
         PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex + 1);
-        
-       
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (needtoLoad &&  nextScenetoLoad == SceneManager.GetActiveScene().buildIndex)
+        if (needtoLoad && nextScenetoLoad == SceneManager.GetActiveScene().buildIndex)
 
         {
             GameManager.health.health = PlayerPrefs.GetInt("health");
