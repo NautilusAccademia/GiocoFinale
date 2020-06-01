@@ -60,7 +60,7 @@ public class LoadManager : MonoBehaviour
         if (needtoLoad )
 
         {
-            GameManager.health.health = PlayerPrefs.GetInt("health");
+            GameManager.health.health = PlayerPrefs.GetInt("health",3);
             needtoLoad = false;
            
             Debug.Log("Grazie Gesu");
