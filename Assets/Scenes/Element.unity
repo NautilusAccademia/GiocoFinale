@@ -27441,6 +27441,11 @@ PrefabInstance:
       propertyPath: spawnPointPast
       value: 
       objectReference: {fileID: 1952287543}
+    - target: {fileID: 3853560253642586403, guid: a7f29b46602df1c4d916724fea713972,
+        type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3853560253642586405, guid: a7f29b46602df1c4d916724fea713972,
         type: 3}
       propertyPath: meshRenderer
@@ -50258,6 +50263,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -20.121368
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752230425713235295, guid: ca07c84b8ee7ac04184320b62c995f9c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2752230426311016831, guid: ca07c84b8ee7ac04184320b62c995f9c,
         type: 3}

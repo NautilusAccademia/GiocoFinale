@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
-public class Camera : MonoBehaviour
+public class LaCamera : MonoBehaviour
 { 
     public CinemachineVirtualCamera virtualCamera1;
     public CinemachineVirtualCamera virtualCamera2;

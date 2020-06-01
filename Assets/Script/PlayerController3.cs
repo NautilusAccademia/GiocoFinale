@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerController3 : MonoBehaviour
 {
-    public float speed = 4; //Player's speed
+    public float speed = 4; //Player's speed(Nanni)
+    
+
     private Animator playerAn;
 
     public bool ignoreInput = false;
@@ -17,6 +19,8 @@ public class PlayerController3 : MonoBehaviour
     private void Start()
     {
         playerAn = GetComponent<Animator>(); //aggiunta elisa
+
+        
     }
 
     private void FixedUpdate()
@@ -27,10 +31,13 @@ public class PlayerController3 : MonoBehaviour
             if (Input.GetAxis("Horizontal") > 0.0f || Input.GetAxis("Horizontal") < -0.0f
                 || Input.GetAxis("Vertical") > 0.0f || Input.GetAxis("Vertical") < -0.0f)
             {
-                Vector3 Movement = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical")); //Apply the axises to the movement
+                //Apply the axises to the movement(Nanni)
+                Vector3 Movement = new Vector3(Input.GetAxis("Horizontal"), 0f, Input.GetAxis("Vertical")); 
+                //The player will rotate according to its movement(Nanni)
+                transform.rotation = Quaternion.LookRotation(Movement);  
+                //move the player(Nanni)
+                transform.Translate(Movement * speed * Time.deltaTime, Space.World);
 
-                transform.rotation = Quaternion.LookRotation(Movement); //The player will rotate according to its movement 
-                transform.Translate(Movement * speed * Time.deltaTime, Space.World); //move the player 
                 playerAn.SetBool("is_walking", true); //aggiunta elisa
             }
 
