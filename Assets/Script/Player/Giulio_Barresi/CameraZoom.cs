@@ -17,8 +17,8 @@ public class CameraZoom : MonoBehaviour
 
     private void Start()
     {
-        startingSize = 3.5f;
-        zoomedSize = 2f;
+        startingSize = 5f;
+        zoomedSize = 3f;
     }
 
     private void Update()

@@ -27444,7 +27444,7 @@ PrefabInstance:
     - target: {fileID: 3853560253642586403, guid: a7f29b46602df1c4d916724fea713972,
         type: 3}
       propertyPath: speed
-      value: 2
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3853560253642586405, guid: a7f29b46602df1c4d916724fea713972,
         type: 3}
@@ -50249,6 +50249,11 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 1902145772}
+    - target: {fileID: 2752230425713235292, guid: ca07c84b8ee7ac04184320b62c995f9c,
+        type: 3}
+      propertyPath: orthographic size
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2752230425713235293, guid: ca07c84b8ee7ac04184320b62c995f9c,
         type: 3}
       propertyPath: m_LocalPosition.x

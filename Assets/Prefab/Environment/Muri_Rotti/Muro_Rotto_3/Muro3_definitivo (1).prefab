@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2946462143860812178}
   - component: {fileID: 6176943119745586084}
   - component: {fileID: 469606231669043037}
+  - component: {fileID: 8637992093361517468}
   m_Layer: 0
   m_Name: Muro3_definitivo (1)
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8637992093361517468
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2213719798727269249}
+  m_Material: {fileID: 13400000, guid: 59cc0acc6dd5529499980928c787129b, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 202.12688, y: 80.288506, z: 12.57096}
+  m_Center: {x: 0, y: 39.1076, z: -0.00000047683716}
