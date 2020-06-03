@@ -59,7 +59,8 @@ public class InteractBy : MonoBehaviour
                 {
                     inter.SpecificInteraction();
                 }
-                playerAn.SetTrigger("Taken");
+                playerAn.SetTrigger("Take");
+               
                 PlayAudioClip();
                 interacted = true;
             }
