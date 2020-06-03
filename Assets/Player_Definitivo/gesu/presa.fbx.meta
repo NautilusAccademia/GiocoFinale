@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3092d190e6ab25c458f7c2439582666d
+guid: e877e282dd0021f4eb407c5a9b67ad34
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable:
@@ -38,8 +38,8 @@ ModelImporter:
       name: Take
       takeName: Take 001
       internalID: 0
-      firstFrame: 5
-      lastFrame: 49
+      firstFrame: 1
+      lastFrame: 51
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -62,7 +62,7 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 1
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -117,12 +117,11 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 82928b3e31d25fb4fb3d073691a30e80,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 2
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
