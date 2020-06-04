@@ -17,6 +17,7 @@ public class PlayerController4 : MonoBehaviour
 
     [SerializeField] Transform groudPosition;
     [SerializeField] float rangeGroundCheck = 0.1f;
+    [SerializeField] float heightGroundCheck = 0.4f;
     [SerializeField] bool showGroundCheck;
 
     GameObject lastPlatform;
@@ -75,7 +76,7 @@ public class PlayerController4 : MonoBehaviour
             playerAn.SetBool("is_walking", false); //aggiunta elisa
         }
 
-        Collider[] colliders = Physics.OverlapBox(groudPosition.position, new Vector3(rangeGroundCheck, rangeGroundCheck, rangeGroundCheck));
+        Collider[] colliders = Physics.OverlapBox(groudPosition.position, new Vector3(rangeGroundCheck, heightGroundCheck, rangeGroundCheck));
         GameObject tempPlatform = null;
         bool lastPlatformPresent = false;
         foreach (Collider collider in colliders)
@@ -125,7 +126,7 @@ public class PlayerController4 : MonoBehaviour
     {
         if (showGroundCheck)
         {
-            Gizmos.DrawCube(groudPosition.position, new Vector3(rangeGroundCheck, rangeGroundCheck, rangeGroundCheck));
+            Gizmos.DrawCube(groudPosition.position, new Vector3(rangeGroundCheck, heightGroundCheck, rangeGroundCheck));
         }
     }
     public void StartIgnoreInput()
