@@ -46925,6 +46925,11 @@ PrefabInstance:
       propertyPath: healthHUD.Array.data[2]
       value: 
       objectReference: {fileID: 5420365}
+    - target: {fileID: 552857269147259302, guid: 8ba87bd55694d2444a900c54a6afe540,
+        type: 3}
+      propertyPath: ElementInstantiated.Array.data[0]
+      value: 
+      objectReference: {fileID: 552857269130912479}
     - target: {fileID: 4816195246821300232, guid: 8ba87bd55694d2444a900c54a6afe540,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -46987,6 +46992,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ba87bd55694d2444a900c54a6afe540, type: 3}
+--- !u!1 &552857269130912479 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3998985291103201964, guid: 8ba87bd55694d2444a900c54a6afe540,
+    type: 3}
+  m_PrefabInstance: {fileID: 552857269130912478}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &555179619916876669
 PrefabInstance:
   m_ObjectHideFlags: 0

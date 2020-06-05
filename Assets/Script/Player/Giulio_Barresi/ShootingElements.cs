@@ -25,6 +25,8 @@ public class ShootingElements : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && condition.CheckCondition())
         {
             airGun.SetActive(true);
+            InteractiveElement.instance.DestroyElement();
+            HUD.instance.HideAirHUD();
             air.Play(true);
         }
         if (air.isStopped)
