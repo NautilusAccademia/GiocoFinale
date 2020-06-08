@@ -20,9 +20,4 @@ public class Press : MonoBehaviour
             anim.SetTrigger("Press");
         }
     }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

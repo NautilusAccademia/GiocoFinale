@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3870973097265707832}
   - component: {fileID: 3870973097265707833}
   - component: {fileID: 1348164818856248807}
-  - component: {fileID: 657718760}
+  - component: {fileID: 8768889685613514378}
   m_Layer: 0
   m_Name: AirWall
   m_TagString: Untagged
@@ -4908,7 +4908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3de15886659ab640a97fb3d810a6633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &657718760
+--- !u!114 &8768889685613514378
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

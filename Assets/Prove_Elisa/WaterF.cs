@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterF : MonoBehaviour
+public class WaterF : InteractableObjects
 {
-
+    [SerializeField] Conditions condition;
 
     public GameObject water;
     SkinnedMeshRenderer skinnedMeshRenderer;
@@ -31,9 +31,9 @@ public class WaterF : MonoBehaviour
     {
         skinnedMeshRenderer.SetBlendShapeWeight(0, blendShape);
 
-        if (other.gameObject.CompareTag("Air"))
+        if (other.gameObject.CompareTag("Player") && condition.CheckCondition() && Input.GetKeyDown(KeyCode.E))
         {
-
+            ShootingElements.instance.ShootingAir();
             blendShape += 25f;
 
 
@@ -43,24 +43,9 @@ public class WaterF : MonoBehaviour
         }
     }
 
-
-
-
-
-
-
-
-
-    // Update is called once per frame
-    void Update()
+    public override void SpecificInteraction()
     {
-
-
-
-
+        ShootingElements.instance.ShootingAir();
+        base.SpecificInteraction();
     }
-
-
-
-
 }
