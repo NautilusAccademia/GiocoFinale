@@ -603,7 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf77d47e35ab47447862b021a7d3f27d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 76b3320bfb3a7b24587ed9661969f031, type: 3}
+  audioClip: {fileID: 8300000, guid: ff8ebbba2402ef940b90c1cb8d2fff27, type: 3}
 --- !u!1001 &128069863514650795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -619,7 +619,7 @@ PrefabInstance:
     - target: {fileID: 1419475035382594276, guid: 8e9817dc70fe3644aa875472ad62535e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1024
+      value: 0.0645
       objectReference: {fileID: 0}
     - target: {fileID: 1419475035382594276, guid: 8e9817dc70fe3644aa875472ad62535e,
         type: 3}

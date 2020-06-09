@@ -59,6 +59,15 @@ public class GameManager : MonoBehaviour
         door2 = FindObjectOfType<Door2>();
         damage = FindObjectOfType<Damage>();
 
+        if(YouAreInThePresent)
+        {
+            AudioManager.instance.PresentSnapshot();
+        }
+        else
+        {
+            AudioManager.instance.PastSnapshot();
+        }
+
     }
 
     // Update is called once per frame
