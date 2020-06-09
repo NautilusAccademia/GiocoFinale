@@ -1487,6 +1487,7 @@ GameObject:
   - component: {fileID: 2536052315279758426}
   - component: {fileID: 2536052315279758424}
   - component: {fileID: 2536052315279758427}
+  - component: {fileID: 914186734}
   m_Layer: 0
   m_Name: FakePlayerDef
   m_TagString: Untagged
@@ -1578,6 +1579,14 @@ MonoBehaviour:
   nBlink: 3
   meshRenderer: {fileID: 2773788514888211848}
   colorEnd: {r: 0, g: 0, b: 0, a: 0}
+--- !u!81 &914186734
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5769167415584944125}
+  m_Enabled: 1
 --- !u!1 &6017995515462227183
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    public int health;
+    public int health = 3;
 
     [SerializeField] GameObject[] healthHUD;
 
-    [SerializeField] public float invincibilityTime; // tempo durata invincibilitá
+    [SerializeField] public float invincibilityTime = 2; // tempo durata invincibilitá
     private float currentTime;	// tempo trascorso dall'ultima volta che hai subito danno
 
     private int currentHealthIndex;

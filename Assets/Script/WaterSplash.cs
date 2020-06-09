@@ -6,24 +6,28 @@ public class WaterSplash : MonoBehaviour
 {
     AudioNonInteractiveObject waterAudio;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            waterAudio.PlayAudioClip();
-        }
-    }
+    [SerializeField] float a, b;
+
+    bool once = true;
 
     private void Awake()
     {
-        var render = GetComponent<SkinnedMeshRenderer>();
-        render.SetBlendShapeWeight(0, 100f);
-        Mesh bakeMesh = new Mesh();
-        render.BakeMesh(bakeMesh);
-        var collider = GetComponent<MeshCollider>();
-        collider.sharedMesh = bakeMesh;
-
         waterAudio = GetComponent<AudioNonInteractiveObject>();
+    }
+
+    private void Update()
+    {
+        float y = Mathf.Lerp(a, b, WaterShape.blendShape/100);
+
+        if(GameManager.playerController4.transform.position.y<y && once)
+        {
+            waterAudio.PlayAudioClip();
+            once = false;
+        }
+        else if(GameManager.playerController4.transform.position.y > y)
+        {
+            once = true;
+        }
     }
 
 }
