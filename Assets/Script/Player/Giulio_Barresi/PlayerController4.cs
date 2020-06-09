@@ -29,8 +29,8 @@ public class PlayerController4 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxFallDistance = spawnPointPresent.position.y - 5f;
-        maxFallDistance = spawnPointPast.position.y - 5f;
+        maxFallDistance = spawnPointPresent.position.y - 12.5f;
+        maxFallDistance = spawnPointPast.position.y - 12.5f;
         rb = GetComponent<Rigidbody>();
         playerAn = GetComponent<Animator>(); //aggiunta elisa
     }
