@@ -8,6 +8,7 @@ public class WaterShape : MonoBehaviour
     SkinnedMeshRenderer skinnedMeshRenderer;
     Mesh skinnedMesh;
     public static float blendShape;
+   
 
     // Start is called before the first frame update
     void Start()
