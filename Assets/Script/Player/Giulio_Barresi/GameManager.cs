@@ -106,6 +106,8 @@ public class GameManager : MonoBehaviour
             FakePlayer.transform.position = playerController4.gameObject.transform.position;
             yield return StartCoroutine(WaitASec(3));
             SceneManager.LoadScene(4);
+            GameManager.health.health = PlayerPrefs.GetInt("health", 3);
+
         }
     }
 }

@@ -53,6 +53,15 @@ public class LoadManager : MonoBehaviour
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
+   /* void DeathHealth()
+    {
+        if (GameManager.health = 0)
+
+        {
+            PlayerPrefs.SetInt("health", GameManager.health.health);
+            GameManager.health.health = PlayerPrefs.GetInt("health", 3);
+        }
+    } */
     // called second
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
