@@ -559,9 +559,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc6629224c7aac4abc6b32be5f33b7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  condition: {fileID: 4570858189802303385}
   air: {fileID: 2447753781276994697}
   airGun: {fileID: 1548600741254638882}
+  buttonRange: 0
 --- !u!114 &4570858189802303385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1727,7 +1727,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -183530207247392898, guid: e877e282dd0021f4eb407c5a9b67ad34, type: 3}
+  - {fileID: 2100000, guid: 02f5912dc4674e846a9643dfc90f403b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
