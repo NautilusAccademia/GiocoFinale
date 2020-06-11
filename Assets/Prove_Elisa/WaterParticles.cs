@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class WaterParticles : MonoBehaviour
 {
-    public GameObject buttonAttached;
+    
 
     public static WaterParticles instance;
     public GameObject waterGo;
@@ -16,12 +16,14 @@ public class WaterParticles : MonoBehaviour
     private void Awake()
     {
         instance = this;
+       
     }
 
 
     void Start()
     {
-        waterGo.SetActive(false);
+       waterGo.SetActive(false);
+        
     }
 
   public void Tap()
@@ -31,10 +33,10 @@ public class WaterParticles : MonoBehaviour
             waterGo.SetActive(true);
             waterPart.Play();
         }
-        if (waterPart.isStopped)
+        /*if (waterPart.time == 3.00f)
         {
             waterGo.SetActive(false);
-        }
+        }*/
     }
 
     // Update is called once per frame

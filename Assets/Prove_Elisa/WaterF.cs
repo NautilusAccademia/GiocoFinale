@@ -5,6 +5,8 @@ using UnityEngine;
 public class WaterF : InteractableObjects
 {
     public static bool buttonPressed;
+    public GameObject tube;
+    
 
 
     //[SerializeField] Conditions condition;
@@ -56,6 +58,7 @@ public class WaterF : InteractableObjects
     }
     void FillWater()
     {
+        buttonPressed = true;
         /*if (condition.CheckCondition() && Input.GetKeyDown(KeyCode.E))
         {
             
@@ -66,8 +69,8 @@ public class WaterF : InteractableObjects
         //skinnedMeshRenderer.SetBlendShapeWeight(0, blendShape);
 
         WaterShape.blendShape += 25f;
-        buttonPressed = true;
-        WaterParticles.instance.Tap();
+      
+        //WaterParticles.instance.Tap();
 
     }
 
