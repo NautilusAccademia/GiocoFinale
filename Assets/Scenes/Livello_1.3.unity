@@ -23242,6 +23242,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: newWater (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3877773449281335633, guid: 4d5514c4d17196f41b31d0bd03dc40bf,
+        type: 3}
+      propertyPath: m_TagString
+      value: colliderIce
+      objectReference: {fileID: 0}
     - target: {fileID: 3877773449281335635, guid: 4d5514c4d17196f41b31d0bd03dc40bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -37537,7 +37542,7 @@ GameObject:
   - component: {fileID: 1681056726}
   m_Layer: 0
   m_Name: colliderIce
-  m_TagString: Untagged
+  m_TagString: colliderIce
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37563,7 +37568,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1681056724}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: f4072459e7e20314dadccd9eca6aac94, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -50074,6 +50079,11 @@ PrefabInstance:
       propertyPath: showGroundCheck
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 552857268501846138, guid: 8ba87bd55694d2444a900c54a6afe540,
+        type: 3}
+      propertyPath: colliderFriction
+      value: 
+      objectReference: {fileID: 552857269130912480}
     - target: {fileID: 552857268501846139, guid: 8ba87bd55694d2444a900c54a6afe540,
         type: 3}
       propertyPath: healthHUD.Array.data[0]
@@ -50159,6 +50169,12 @@ PrefabInstance:
 --- !u!1 &552857269130912479 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3998985291103201964, guid: 8ba87bd55694d2444a900c54a6afe540,
+    type: 3}
+  m_PrefabInstance: {fileID: 552857269130912478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &552857269130912480 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 552857268501846137, guid: 8ba87bd55694d2444a900c54a6afe540,
     type: 3}
   m_PrefabInstance: {fileID: 552857269130912478}
   m_PrefabAsset: {fileID: 0}

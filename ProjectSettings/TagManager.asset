@@ -17,6 +17,7 @@ TagManager:
   - Brazier
   - Damage
   - Platform
+  - colliderIce
   layers:
   - Default
   - TransparentFX

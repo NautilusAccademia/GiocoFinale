@@ -25,6 +25,8 @@ public class PlayerController4 : MonoBehaviour
 
     Rigidbody rb;
 
+    [SerializeField] Collider colliderFriction;
+
     //public float maxVelocity;
 
     // Start is called before the first frame update
@@ -158,5 +160,38 @@ public class PlayerController4 : MonoBehaviour
     {
         yield return new WaitForSeconds(seconds);
         GameManager.playerController4.EndIgnoreInput();
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "colliderIce")
+        {
+            Debug.Log("MADONNA");
+            if (!ignoreInput)
+            {
+                if (Input.GetAxisRaw("Horizontal") > 0.0f || Input.GetAxisRaw("Horizontal") < -0.0f
+               || Input.GetAxisRaw("Vertical") > 0.0f || Input.GetAxisRaw("Vertical") < -0.0f)
+
+                {
+                    isRunning = false;
+
+                    float assX = Input.GetAxis("Horizontal");
+
+                    float assZ = Input.GetAxis("Vertical");
+
+                    Vector3 direction = new Vector3(assX, 0, assZ).normalized;
+
+                    transform.rotation = Quaternion.LookRotation(direction);
+
+                    rb.AddForce(direction * speed);
+
+
+                    colliderFriction.material.dynamicFriction = 0;
+                    colliderFriction.material.staticFriction = 0;
+
+
+                }
+            }
+        }
     }
 }
