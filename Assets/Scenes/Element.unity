@@ -49177,6 +49177,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrain_Presente
       objectReference: {fileID: 0}
+    - target: {fileID: 1389219446469632047, guid: cde3a9d5f0fa3f843bf05f89b5f03b7c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cde3a9d5f0fa3f843bf05f89b5f03b7c, type: 3}
 --- !u!4 &1389219445976637526 stripped
