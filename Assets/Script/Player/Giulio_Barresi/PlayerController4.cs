@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerController4 : MonoBehaviour
 {
-    public float speed;
+    [SerializeField] float speed;
+    [SerializeField] bool isRunning;
     private Animator playerAn;
 
     public float maxFallDistance = 0f;
@@ -29,8 +30,10 @@ public class PlayerController4 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        maxFallDistance = spawnPointPresent.position.y - 12.5f;
-        maxFallDistance = spawnPointPast.position.y - 12.5f;
+        speed = 2.5f;
+        isRunning = false;
+        maxFallDistance = spawnPointPresent.position.y - 10f;
+        maxFallDistance = spawnPointPast.position.y - 10f;
         rb = GetComponent<Rigidbody>();
         playerAn = GetComponent<Animator>(); //aggiunta elisa
     }
@@ -43,6 +46,8 @@ public class PlayerController4 : MonoBehaviour
             if (Input.GetAxisRaw("Horizontal") > 0.0f || Input.GetAxisRaw("Horizontal") < -0.0f
                 || Input.GetAxisRaw("Vertical") > 0.0f || Input.GetAxisRaw("Vertical") < -0.0f)
             {
+                isRunning = false;
+
                 float assX = Input.GetAxis("Horizontal");
 
                 float assZ = Input.GetAxis("Vertical");
@@ -52,6 +57,16 @@ public class PlayerController4 : MonoBehaviour
                 transform.rotation = Quaternion.LookRotation(direction);
 
                 rb.velocity = new Vector3(direction.x * speed, rb.velocity.y, direction.z * speed);
+
+                if(Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) && isRunning == false)
+                {
+                    isRunning = true;
+                    speed = 3.5f;
+                }
+                if(!isRunning)
+                {
+                    speed = 2.5f;
+                }             
 
                 /*if(rb.velocity.magnitude > maxVelocity)
                 {

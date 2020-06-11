@@ -29507,6 +29507,11 @@ PrefabInstance:
       propertyPath: groudPosition
       value: 
       objectReference: {fileID: 1221115353}
+    - target: {fileID: 552857268501846138, guid: 8ba87bd55694d2444a900c54a6afe540,
+        type: 3}
+      propertyPath: speed
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 552857268501846139, guid: 8ba87bd55694d2444a900c54a6afe540,
         type: 3}
       propertyPath: healthHUD.Array.data[0]
