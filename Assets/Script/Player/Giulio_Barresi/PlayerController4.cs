@@ -27,6 +27,8 @@ public class PlayerController4 : MonoBehaviour
 
     [SerializeField] Collider colliderFriction;
 
+    [SerializeField] LayerMask groundcheckmask;
+    bool lastframeOnIce = false;
     //public float maxVelocity;
 
     // Start is called before the first frame update
@@ -60,15 +62,15 @@ public class PlayerController4 : MonoBehaviour
 
                 rb.velocity = new Vector3(direction.x * speed, rb.velocity.y, direction.z * speed);
 
-                if(Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) && isRunning == false)
+                if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) && isRunning == false)
                 {
                     isRunning = true;
                     speed = 3.5f;
                 }
-                if(!isRunning)
+                if (!isRunning)
                 {
                     speed = 2.5f;
-                }             
+                }
 
                 /*if(rb.velocity.magnitude > maxVelocity)
                 {
@@ -93,11 +95,17 @@ public class PlayerController4 : MonoBehaviour
             playerAn.SetBool("is_walking", false); //aggiunta elisa
         }
 
-        Collider[] colliders = Physics.OverlapBox(groudPosition.position, new Vector3(rangeGroundCheck, heightGroundCheck, rangeGroundCheck));
+        Collider[] colliders = Physics.OverlapBox(groudPosition.position, new Vector3(rangeGroundCheck, heightGroundCheck, rangeGroundCheck),Quaternion.identity,groundcheckmask);
         GameObject tempPlatform = null;
         bool lastPlatformPresent = false;
+        bool OnlyOnIce = true;
+
         foreach (Collider collider in colliders)
         {
+            if (collider.tag != "colliderIce")
+            {
+                OnlyOnIce = false;
+            }
             if (collider.tag == "Platform")
             {
                 tempPlatform = collider.gameObject;
@@ -108,6 +116,22 @@ public class PlayerController4 : MonoBehaviour
                 }
             }
         }
+
+        if (OnlyOnIce)
+        {
+            OnIce();
+
+            
+
+        }
+        else
+        {
+            if (lastframeOnIce)
+            {
+                EndIgnoreInput();
+            }
+        }
+
         if (!lastPlatformPresent)
         {
             lastPlatform = tempPlatform;
@@ -138,6 +162,9 @@ public class PlayerController4 : MonoBehaviour
             //Destroy(spawnPointPast.gameObject);
             //Destroy(spawnPointPresent.gameObject);
         }
+
+        lastframeOnIce = OnlyOnIce;
+
     }
     private void OnDrawGizmos()
     {
@@ -162,9 +189,8 @@ public class PlayerController4 : MonoBehaviour
         GameManager.playerController4.EndIgnoreInput();
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnIce()
     {
-        if (collision.gameObject.tag == "colliderIce")
         {
             Debug.Log("MADONNA");
             if (!ignoreInput)
@@ -175,6 +201,9 @@ public class PlayerController4 : MonoBehaviour
                 {
                     isRunning = false;
 
+                    Debug.Log("Inizio");
+                    StartIgnoreInput();
+
                     float assX = Input.GetAxis("Horizontal");
 
                     float assZ = Input.GetAxis("Vertical");
@@ -183,7 +212,9 @@ public class PlayerController4 : MonoBehaviour
 
                     transform.rotation = Quaternion.LookRotation(direction);
 
-                    rb.AddForce(direction * speed);
+                    //rb.AddForce(direction * speed);
+
+                    rb.velocity = direction * 3.5f;
 
 
                     colliderFriction.material.dynamicFriction = 0;
@@ -193,5 +224,53 @@ public class PlayerController4 : MonoBehaviour
                 }
             }
         }
+
     }
+        /*void OnCollisionStay(Collision collision)
+        {
+            if (collision.gameObject.tag == "colliderIce")
+            {
+                Debug.Log("MADONNA");
+                if (!ignoreInput)
+                {
+                    if (Input.GetAxisRaw("Horizontal") > 0.0f || Input.GetAxisRaw("Horizontal") < -0.0f
+                   || Input.GetAxisRaw("Vertical") > 0.0f || Input.GetAxisRaw("Vertical") < -0.0f)
+
+                    {
+                        isRunning = false;
+
+                        Debug.Log("Inizio");
+                        StartIgnoreInput();
+
+                        float assX = Input.GetAxis("Horizontal");
+
+                        float assZ = Input.GetAxis("Vertical");
+
+                        Vector3 direction = new Vector3(assX, 0, assZ).normalized;
+
+                        transform.rotation = Quaternion.LookRotation(direction);
+
+                        //rb.AddForce(direction * speed);
+
+                        rb.velocity = direction * 3.5f;
+
+
+                        colliderFriction.material.dynamicFriction = 0;
+                        colliderFriction.material.staticFriction = 0;
+
+
+                    }
+                }
+            }
+        }*/
+
+        /*private void OnCollisionExit(Collision collision)
+        {
+            if (collision.gameObject.tag == "colliderIce")
+            {
+                EndIgnoreInput();
+                Debug.Log("Fine");
+            }
+        }*/
+    
 }

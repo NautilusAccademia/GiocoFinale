@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
+    static public int count;
     public static PlayerInteraction playerInteraction;
     public static InteractiveElement interactiveElement;
     public static FireOnBrazier fireOnBrazier;
@@ -106,6 +106,7 @@ public class GameManager : MonoBehaviour
             FakePlayer.transform.position = playerController4.gameObject.transform.position;
             yield return StartCoroutine(WaitASec(3));
             SceneManager.LoadScene(4);
+            PlayerPrefs.SetInt("health",3);
         }
     }
 }

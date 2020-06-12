@@ -7,7 +7,7 @@ public class LoadManager : MonoBehaviour
 {
     private int nextScenetoLoad;
     public static LoadManager instance;
-
+    
     private bool needtoLoad = false;
 
     // Start is called before the first frame update
@@ -43,6 +43,7 @@ public class LoadManager : MonoBehaviour
 
         SceneManager.LoadScene(nextScenetoLoad);
         PlayerPrefs.SetInt("SavedScene", SceneManager.GetActiveScene().buildIndex + 1);
+        PlayerPrefs.SetInt("Coin",GameManager.count);
         SaveHealth();
 
 
@@ -56,6 +57,7 @@ public class LoadManager : MonoBehaviour
     // called second
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        GameManager.count = PlayerPrefs.GetInt("Coin", 0);
         nextScenetoLoad = SceneManager.GetActiveScene().buildIndex + 1;
         if (needtoLoad )
 
@@ -63,7 +65,7 @@ public class LoadManager : MonoBehaviour
             GameManager.health.health = PlayerPrefs.GetInt("health",3);
             needtoLoad = false;
            
-            Debug.Log("Grazie Gesu");
+             Debug.Log("Grazie Gesu");
             GameManager.health.UpdateHUD();
 
 

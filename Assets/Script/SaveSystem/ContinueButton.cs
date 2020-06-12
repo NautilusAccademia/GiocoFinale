@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,13 +13,21 @@ public class ContinueButton : MonoBehaviour
 
     private bool needtoLoad = false;
 
-  
+    private void Start()
+    {
+       
+        
+            GetComponent<CanvasGroup>().interactable = PlayerPrefs.HasKey("SavedScene");
+            
+        
+    }
 
     public void ContinueGame()
     {
+        
         sceneToContinue = PlayerPrefs.GetInt("SavedScene"); //apre i dati del salvataggio
-      
 
+        
 
         if (sceneToContinue != 0)
         {
@@ -28,6 +37,8 @@ public class ContinueButton : MonoBehaviour
             LoadManager.instance.SetneedtoLoad();
 
         }
+
+       
 
         else
             return;
