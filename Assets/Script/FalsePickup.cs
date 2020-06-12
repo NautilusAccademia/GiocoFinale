@@ -5,19 +5,19 @@ using UnityEngine.UI;
 
 public class FalsePickup : MonoBehaviour
 {
-    static private int count;
+    
     public Text countText;
 
     // Start is called before the first frame update
     void Start()
     {
-        count = 0;
+        SetCountText();
         
     }
 
     void SetCountText()
     {
-        countText.text = count.ToString();
+        countText.text = GameManager.count.ToString();
 
     }
 
@@ -25,7 +25,7 @@ public class FalsePickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            count++;
+            GameManager.count++;
             SetCountText();
             AudioManager.instance.PlayCollectible();
             Destroy(gameObject);
