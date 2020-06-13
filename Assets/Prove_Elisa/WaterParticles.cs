@@ -5,43 +5,49 @@ using UnityEngine;
 
 public class WaterParticles : MonoBehaviour
 {
-    
+
 
     public static WaterParticles instance;
-    public GameObject waterGo;
-    public ParticleSystem waterPart;
+    //[SerializeField] GameObject waterGo;
 
+    [SerializeField] ParticleSystem waterPart;
 
     // Start is called before the first frame update
     private void Awake()
     {
         instance = this;
-       
     }
 
 
     void Start()
     {
-       waterGo.SetActive(false);
-        
+        waterPart.gameObject.SetActive(false);
+        //waterGo.SetActive(false);
     }
 
-  public void Tap()
+    public void Tap()
     {
-        if (WaterF.buttonPressed == true)
-        {
-            waterGo.SetActive(true);
-            waterPart.Play();
-        }
+        waterPart.gameObject.SetActive(true);
+        waterPart.Play();
+        //waterGo.SetActive(true);
+        
+           
+
+
         /*if (waterPart.time == 3.00f)
         {
-            waterGo.SetActive(false);
+        waterGo.SetActive(false);
         }*/
-    }
 
-    // Update is called once per frame
-    void FixedUpdate()
+        //waterPart.gameObject.SetActive(true);
+    }
+    private void Update()
     {
-      
+        if (waterPart.isStopped)
+        {
+            waterPart.gameObject.SetActive(false);
+        }
     }
 }
+
+
