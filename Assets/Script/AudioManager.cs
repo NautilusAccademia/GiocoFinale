@@ -51,7 +51,8 @@ public class AudioManager : MonoBehaviour
         {
             if (instance != this)
             {
-                if(scene.name == "GameOver" || scene.name == "MenùStart" || instance.prevSceneName == "MenùStart")
+                if(scene.name == "GameOver" || scene.name == "MenùStart" || scene.name == "WinMenu" ||
+                    instance.prevSceneName == "MenùStart" || instance.prevSceneName == "GameOver" || instance.prevSceneName == "WinMenu")
                 {
                     Destroy(instance.gameObject);
                     instance = this;
