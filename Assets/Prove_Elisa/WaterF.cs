@@ -50,7 +50,7 @@ public class WaterF : InteractableObjects
         }
     }*/
 
-    [SerializeField] ParticleSystem waterPart;
+    [SerializeField] WaterParticles waterParticles;
 
     void Start()
     {
@@ -71,7 +71,7 @@ public class WaterF : InteractableObjects
 
         WaterShape.blendShape += 25f;
 
-        WaterParticles.instance.Tap();   
+        waterParticles.Tap();
     }
 
     public override void SpecificInteraction()

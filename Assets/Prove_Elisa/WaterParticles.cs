@@ -5,19 +5,10 @@ using UnityEngine;
 
 public class WaterParticles : MonoBehaviour
 {
-
-
-    public static WaterParticles instance;
+    
     //[SerializeField] GameObject waterGo;
 
     [SerializeField] ParticleSystem waterPart;
-
-    // Start is called before the first frame update
-    private void Awake()
-    {
-        instance = this;
-    }
-
 
     void Start()
     {
@@ -30,10 +21,6 @@ public class WaterParticles : MonoBehaviour
         waterPart.gameObject.SetActive(true);
         waterPart.Play();
         //waterGo.SetActive(true);
-        
-           
-
-
         /*if (waterPart.time == 3.00f)
         {
         waterGo.SetActive(false);
